@@ -1,0 +1,510 @@
+﻿.wrap
+{
+	width: 990px;
+	margin: 7px auto 0px auto;
+	overflow: hidden;
+}
+
+.wrap .lefts
+{
+	background-position: left -10px;
+	float: left;
+	width: 196px;
+	overflow: hidden;
+	background-image: url( '../Images/home_left_bg.jpg' );
+	background-repeat: no-repeat;
+	padding-top: 10px;
+}
+.wrap #lefts
+{
+	background-image: url( '../Images/home_left_bg.jpg' );
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 10px;
+	font-size: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.wrap .lefts ul
+{
+	border-style: none solid none solid;
+	border-width: 1px;
+	border-color: #f4b991;
+	background-color: #ffede3;
+	padding-left: 30px;
+	padding-right: 10px;
+}
+.wrap .lefts ul li h1
+{
+	background-position: left bottom;
+	font-size: 14px;
+	font-weight: bold;
+	color: #9a3903;
+	background-image: url( '../Images/home_left_bg2.jpg' );
+	background-repeat: no-repeat;
+	padding-bottom: 7px;
+	padding-left: 20px;
+}
+.wrap .lefts ul li
+{
+	padding-top: 7px;
+}
+.wrap .lefts ul li a
+{
+	padding-left: 20px;
+}
+.wrap .rights
+{
+	width: 780px;
+	overflow: hidden;
+	float: right;
+}
+.wrap .rights .myself
+{
+	border: 1px dashed #ff6fa0;
+	width: 778px;
+	background-color: #fbeae8;
+	overflow: hidden;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+.wrap .rights .myself dl
+{
+	float: left;
+}
+.wrap .rights .myself dl img
+{
+	border: 1px solid #999999;
+	margin-left: 30px;
+	margin-top: 10px;
+	padding: 5px;
+	background-color: #FFFFFF;
+}
+.wrap .rights .myself ul
+{
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 400px;
+}
+.wrap .rights .myself ul li
+{
+	display: block;
+	height: 22px;
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	margin-top: 5px;
+}
+.wrap .rights .myself ul li span
+{
+	font-weight: bold;
+	color: Red;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.wrap .rights .myself ul li em
+{
+	color: #000099;
+}
+.wrap .rights .myself ul li img
+{
+	padding-bottom: 4px;
+}
+.wrap .rights .myself p
+{
+	margin-top: 15px;
+	float: left;
+}
+.wrap .rights .myself p .home_cz
+{
+	background-image: url( '../Images/home_tijiao.jpg' );
+	background-repeat: no-repeat;
+	background-position: left center;
+	width: 45px;
+	height: 22px;
+	display: inline-block;
+	margin-left: 50px;
+}
+.wrap .rights .myself p .home_tk
+{
+	background-image: url( '../Images/home_tijiao.jpg' );
+	background-repeat: no-repeat;
+	background-position: right center;
+	width: 45px;
+	height: 22px;
+	display: inline-block;
+	margin-left: 20px;
+}
+.wrap .rights .jilu
+{
+	border: 1px solid #dbdbdb;
+	margin-top: 10px;
+}
+
+
+.wrap .rights .jilu .title
+{
+	background-image: url( '../Images/home_my_bg.jpg' );
+	background-repeat: repeat-x;
+	height: 28px;
+	overflow: hidden;
+	line-height: 28px;
+}
+.wrap .rights .jilu .title h1
+{
+	color: #666666;
+	padding-left: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+}
+.wrap .rights .jilu .title a
+{
+	float: right;
+	margin-right: 10px;
+}
+.wrap .rights .jilu table .col td
+{
+	background-color: #f8f1f4;
+}
+
+OL LI
+{
+	margin: 8px;
+}
+#con
+{
+	font-size: 12px;
+	margin: 0px auto;
+	width: 778px;
+}
+#tags
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px 0px 0px 0px;
+	width: 700px;
+	padding-top: 0px;
+	height: 28px;
+}
+#tags LI
+{
+	background: url(../Images/con_a_bg2.jpg) no-repeat;
+	float: left;
+	margin-right: 10px;
+	list-style-type: none;
+	height: 28px;
+	width: 101px;
+}
+#tags LI a
+{
+	text-align: center;
+	float: left;
+	padding-bottom: 0px;
+	color: #333333;
+	line-height: 28px;
+	padding-top: 0px;
+	height: 28px;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	width: 101px;
+}
+#tags LI.emptyTag
+{
+	background: none transparent scroll repeat 0% 0%;
+	width: 4px;
+}
+#tags LI.selectTag
+{
+	margin-bottom: -2px;
+	position: relative;
+	height: 30px;
+}
+#tags LI.selectTag A
+{
+	background: url(../Images/con_a_bg.jpg) no-repeat;
+	color: #000;
+	line-height: 30px;
+	height: 30px;
+}
+#tagContent
+{
+	border-right: #aecbd4 1px solid;
+	padding-right: 1px;
+	border-top: #aecbd4 1px solid;
+	padding-left: 1px;
+	padding-bottom: 1px;
+	border-left: #aecbd4 1px solid;
+	border-bottom: #aecbd4 1px solid;
+	background-color: #fff;
+	border-color: #dfdfdf;
+}
+.tagContent
+{
+	padding-right: 10px;
+	display: none;
+	padding-left: 10px;
+	background: url(../Images/con_a_bg3.jpg) repeat-x;
+	padding-bottom: 10px;
+	width: 754px;
+	color: #474747;
+	padding-top: 10px;
+	overflow: hidden;
+	padding-right: 10px;
+}
+#tagContent DIV.selectTag
+{
+	display: block;
+}
+
+.yinghang
+{
+	display: block;
+}
+.yinghang ul
+{
+	float: left;
+	margin-bottom: 10px;
+	display: block;
+}
+.yinghang ul li
+{
+	float: left;
+	margin-left: 3px;
+	overflow: hidden;
+	height: 30px;
+	line-height: 30px;
+}
+.yinghang ul li img
+{
+	border-style: none;
+	border-width: 0px;
+	margin-right: 15px;
+}
+#tagContent .left li span
+{
+	color: Red;
+}
+#tagContent .left li em
+{
+	width: 70px;
+	display: inline-block;
+}
+#tagContent .left li .title
+{
+	float: left;
+	width: 70px;
+	padding-top: 15px;
+}
+#tagContent .left li p input
+{
+	border-style: none;
+	border-width: 0px;
+	background-image: url( '../Images/home_coz_bg.jpg' );
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 30px;
+	display: block;
+	margin-left: 100px;
+}
+#tagContent .left li .yinghang
+{
+	float: right;
+	width: 680px;
+}
+
+.tagContent .left li
+{
+	margin-top: 10px;
+}
+
+.bangding
+{
+	padding-left: 20px;
+	width: 738px;
+}
+.wrap .rights .i-e
+{
+	border: 1px solid #ffb583;
+	background-color: #FFFCF7;
+	height: 20px;
+	line-height: 20px;
+}
+.wrap .rights .i-f
+{
+	border-style: outset inset inset outset;
+	border-width: 3px;
+	border-color: #ffb583;
+	background-color: #FFEFE8;
+	vertical-align: middle;
+	font-weight: bold;
+	width: 100px;
+}
+.shouji table
+{
+	border: none;
+}
+.shouji table tr td
+{
+}
+.jilus
+{
+	margin-top: 10px;
+}
+.jilus tr td
+{
+	height: 40px;
+}
+.jilus input
+{
+}
+.jilua table
+{
+	border: 1px solid #CCCCCC;
+}
+.jilua table tr td
+{
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	height: 30px;
+	line-height:30px;
+	font-family: Arial;
+		border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+}
+.jilua table thead
+{
+	background-color: #f8e9ef;
+}
+
+.p_a_select
+{
+	margin-top: 5px;
+}
+.p_a_select p
+{
+	float: left;
+	font-weight: bold;
+}
+.p_a_select a, .p_a_select select
+{
+	float: right;
+}
+.p_a_select select
+{
+	margin-left: 30px;
+}
+.divp p
+{
+	line-height: 25px;
+}
+.divp table
+{
+	margin: 10px auto;
+	width: 100%;
+}
+.divp table tr td
+{
+	background-color: #f8f8f8;
+	text-align: left;
+	padding-left: 10px;
+}
+.pldelect
+{
+	margin-top: 7px;
+	float: right;
+}
+#tagContent0 .geren tr td
+{
+	text-align: right;
+	border: none;
+	line-height: 30px;
+}
+
+.r td
+{
+	text-align: left;
+}
+.chaxun
+{
+	background-color: Transparent;
+	border-style: None;
+	font-size: Smaller;
+	height: 22px;
+	width: 50px;
+	cursor: hand;
+	background-image: url(../images/button_chaxun.jpg);
+	border-left-style: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+}
+.tbhead_bg
+{
+	background: #d8d8d8;
+}
+.jilua #con .tagContent table
+{
+	width: 100%;
+}
+.youxiang tr td
+{
+	line-height: 30px;
+	padding-left: 10px;
+}
+#tagContent0 .xgpwd
+{
+}
+
+#tagContent0 .xgpwd tr td
+{
+	text-align: left;
+	padding-left: 10px;
+	line-height: 30px;
+	border: 0px;
+}
+.input_txt
+{
+	border: 1px solid #666666;
+	padding: 3px;
+	width: 150px;
+	height: 14px;
+	line-height: 14px;
+	margin-right: 7px;
+	font-size: 12px;
+	font-family: Arial;
+}
+.qrxg
+{
+	background-image: url('../Images/qrxg.jpg');
+	background-repeat: no-repeat; width:116px; height:29px; border:0px; text-indent:500px; float:left;
+}
+
+.padd td
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#tbrow1 td, #divbank td, #nottd td
+{
+	border: 0px;
+}
+
+
+#tagContent .p_a_select td
+{
+	border: 0px;
+}
+#tagContent .p_a_select td a
+{
+	float: left;
+	margin-left: 10px;
+}
+#gPager tr td
+{
+	border: 0px;
+}
+

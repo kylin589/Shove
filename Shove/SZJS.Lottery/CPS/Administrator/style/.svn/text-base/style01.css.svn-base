@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,select,form,textarea,select,table,tr,td,span{margin:0px; padding:0px; color:#000000; font-size:12px;
+font-family:Arial, Helvetica, sans-serif;}
+
+html,body{
+}
+
+a:link,a:visited{color:#000; text-decoration:none;}
+a:hover{ color:red;}
+
+.center{
+	margin:0 auto;
+	text-align:center;
+}
+
+.table{border-top:1px solid #D4D4D4; border-left:1px solid #D4D4D4;}
+.table td{height:24px; line-height:24px; border-bottom:1px solid #D4D4D4; border-right:1px solid #D4D4D4;}
+.title{height:36px; font-size:16px; font-weight:600; background:#F3F3F3; line-height:36px;}
+
+.menuPanel{
+	line-height:24px;
+	background:;
+}
+.menuPanel .help{padding-left:12px; height:16px; overflow:hidden;}
+.menuPanel .menuList{margin:0px;}
+.menuPanel .menuList .menuItem{margin:0px 0px;}
+.menuPanel .menuList .menuItem .head{
+	background:url(images/catalog.jpg) no-repeat;
+	height:34px;
+	line-height:28px;
+	font-size:14px;
+	color:#315b6b;
+	font-weight:700;
+	padding-left:16px;
+}
+.menuPanel .menuList .menuItem .content{
+	
+}
+.menuPanel .menuList .menuItem .content div{
+	padding-left:48px;
+	background:url(images/common.jpg) no-repeat;
+	margin-bottom:3px;
+}
+.menuPanel .menuList .menuItem .content div.chose{
+	padding-left:48px;
+	background:url(images/chose.jpg) no-repeat;
+	margin-bottom:3px;
+}
+.menuPanel .menuList .menuItem .content a{
+	color:#004760;
+	text-decoration:none;
+}
+
+.zPanel{width:98%; line-height:24px; padding:8px 0px; background:#F9F9F9; border:1px solid #D4D4D4;}
+.zPanel .title{text-align:center; font-weight:bold;}
+.zPanel .content{line-height:24px; width:92%; border:1px solid #D5D5D5; margin:5px; text-align:center;}
+.zPanel .content .item{width:100%; border-bottom:1px solid #E4E4E4;}
+.zPanel .content .item .left{width:20%; float:left; overflow:hidden; text-align:right;}
+.zPanel .content .item .right{width:80%; float:left; overflow:hidden; text-align:left;}
+
+
+.input20{width:240px;}
+.input30{width:360px;}
+.input50{width:600px;}
+.red{color:#F00;}
+.green{color:#0F0;}
+.blue{color:#00F;}
+
+.baseTab{
+	border-top:solid 1px #D4D4D4; border-left:solid 1px #D4D4D4;
+}
+.baseTab td{
+	line-height:25px;
+	border-bottom:solid 1px #D4D4D4; border-right:solid 1px #D4D4D4;
+}
+.baseTab tr.search{
+	background:#CF6;
+	text-align:left;
+}
+.baseTab tr.head{
+	background:#CFC;
+	font-weight:800;
+}
+.baseTab tr.pager{
+	background:#CF6;
+}
+.baseTab tr.pager a:link,.baseTab tr.pager a:visited{color:#00F;}
+.baseTab tr.pager a:hover{color:#F00;}
+.baseTab tr.click{background:#CF0;}
+
+.topbody{
+	height:100%;
+	background:url(images/toprepeat.jpg) repeat left top;
+}
+
+.topbody .main{
+	height:78px;
+	background:url(images/topbg.jpg) no-repeat left top;
+	overflow:hidden;
+}
+
+.topmenu{
+	width:100%;
+	height:78px;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+.topmenu li{
+	color:#FFF;
+	list-style:none;
+	float:left;
+	font-family:"黑体","微软雅黑","宋体";
+}
+.topmenu .logo{
+	width:8%;
+	padding-top:8px;
+	text-align:center;
+}
+.topmenu .companyName{
+	width:18%;
+	margin-top:22px;
+}
+.topmenu .companyName .cn{
+	color:#FFF;
+	font-size:20px;
+	font-weight:800;
+	letter-spacing:8px;
+}
+.topmenu .companyName .en{
+	color:#FFF;
+	font-size:12px;
+	font-weight:600;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.topmenu .line{
+	width:1%;
+	padding-top:24px;
+}
+.topmenu .systemName{
+	width:49%;
+	font-size:20px;
+	font-weight:800;
+	padding-top:28px;
+}
+.topmenu .quick{
+	width:23%;
+}
+
+.quickpanel{
+	width:256px;
+	margin-top:9px;
+	overflow:hidden;
+}
+.quickpanel .quickl{
+	width:32px;
+	height:61px;
+	background:url(images/pleft.gif) no-repeat;
+	float:left;
+	overflow:hidden;
+}
+.quickpanel .quickb{
+	width:192px;
+	height:61px;
+	background:url(images/pbg.gif) repeat-x;
+	float:left;
+}
+.quickpanel .quickr{
+	width:32px;
+	height:61px;
+	background:url(images/pright.gif) no-repeat;
+	float:left;
+	overflow:hidden;
+}
+.quicklist{
+	width:192px;
+	list-style:none;
+	text-align:center;
+	color:#FFF;
+	overflow:hidden;
+	margin:0; padding:0;
+	margin-top:12px;
+}
+.quicklist dd{
+	width:64px;
+	line-height:32px;
+	list-style:none;
+	float:left;
+	margin:0; padding:0;
+}
+.quicklist dd a:link,.quicklist dd a:visited{
+	color:#FFF;
+	text-decoration:none;
+}
+.quicklist dd a:hover{
+	color:#C00;
+}
+
+.picker{clear:left; float:left;}
+.view{float:left;}
+
+

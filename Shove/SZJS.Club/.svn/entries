@@ -1,0 +1,273 @@
+10
+
+dir
+502
+svn://192.168.1.254/SZJS.Club
+svn://192.168.1.254
+
+
+
+2011-09-26T05:29:45.375000Z
+5
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+818e474e-8ccb-db4b-8ccd-ddf760758e43
+
+scriptevent_sqlserver.config
+file
+
+
+
+
+2011-11-05T02:01:51.688718Z
+e72b53512361cb3120524b0d1800e3c9
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+190
+
+App_Log
+dir
+
+web.config
+file
+
+
+
+
+2011-11-05T02:01:51.695719Z
+e76d44b7932568b93c6be9abd3e2e220
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9378
+
+index.aspx
+file
+
+
+
+
+2011-11-05T02:01:51.701719Z
+d8f78ca7b10b1dbf172b9c55be14219f
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13
+
+services
+dir
+
+upload
+dir
+
+editor
+dir
+
+upgrade
+dir
+
+admin
+dir
+
+sound
+dir
+
+DNT.config
+file
+
+
+
+
+2011-11-05T02:01:51.711719Z
+d222664f4ffc1a86df0939529dd94da5
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+387
+
+Global.asax
+file
+
+
+
+
+2011-11-05T02:01:51.717720Z
+58b8f12ee3143a4ecf6a1042202cb383
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+53
+
+watermark
+dir
+
+templates
+dir
+
+FreeTextBox
+dir
+
+tools
+dir
+
+avatars
+dir
+
+ipdata
+dir
+
+archiver
+dir
+
+cache
+dir
+
+Richie
+dir
+
+config
+dir
+
+images
+dir
+
+javascript
+dir
+
+Bin
+dir
+
+App_Code
+dir
+
+fckeditor
+dir
+
+aspx
+dir
+
+News
+dir
+
+ShoveWebUI_client
+dir
+

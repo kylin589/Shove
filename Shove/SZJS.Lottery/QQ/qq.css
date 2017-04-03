@@ -1,0 +1,52 @@
+H2 {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; PADDING-TOP: 0px
+}
+UL {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; PADDING-TOP: 0px
+}
+LI {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; PADDING-TOP: 0px
+}
+A:hover {
+	COLOR: #000000
+}
+A {
+	COLOR: #696969; FONT-SIZE: 12px; TEXT-DECORATION: none;
+}
+.QQbox {
+	Z-INDEX: 999; POSITION: absolute; TEXT-ALIGN: center; WIDTH: 120px; TOP: 83px; RIGHT: 0px
+}
+.QQbox .press {
+	POSITION: absolute; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 29px; BORDER-TOP-STYLE: none; HEIGHT: 125px; BORDER-LEFT-STYLE: none; CURSOR: pointer; RIGHT: 0px
+}
+.QQbox .Qlist {
+	Z-INDEX: 100; POSITION: absolute; WIDTH: 120px; BACKGROUND: url(http://www.baixingcai.com/QQ/qq_listbg.gif) repeat-y -155px 0px; LEFT: 0px
+}
+.QQbox .Qlist .t {
+	WIDTH: 120px; FLOAT: right; HEIGHT: 6px; FONT-SIZE: 1px
+}
+.QQbox .Qlist .b {
+	WIDTH: 120px; FLOAT: right; HEIGHT: 6px; FONT-SIZE: 1px
+}
+.QQbox .Qlist .t {
+	BACKGROUND: url(http://www.baixingcai.com/QQ/qq_listbg.gif) no-repeat left 50%
+}
+.QQbox .Qlist .b {
+	BACKGROUND: url(http://www.baixingcai.com/QQ/qq_listbg.gif) no-repeat right 50%
+}
+.QQbox .Qlist .con {
+	MARGIN: 0px auto; WIDTH: 90%; BACKGROUND: #fff
+}
+.QQbox .Qlist .con H2 {
+	BORDER-BOTTOM: #be342d 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #be342d 1px solid; FONT: bold 12px/22px "????"; BACKGROUND: url(http://www.baixingcai.com/QQ/qq_listbg.gif) repeat-y -163px 0px; HEIGHT: 22px; COLOR: #fff; BORDER-TOP: #be342d 1px solid; BORDER-RIGHT: #be342d 1px solid
+}
+.QQbox .Qlist .con UL {
+	
+}
+.QQbox .Qlist .con UL LI {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 8px; PADDING-RIGHT: 0px; BACKGROUND: #ffffff; HEIGHT: 20px; PADDING-TOP: 3px
+}
+.QQbox .Qlist .con UL LI.odd {
+	BACKGROUND: #fff;
+	text-align:left;
+}

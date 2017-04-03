@@ -1,0 +1,55 @@
+10
+
+dir
+502
+svn://192.168.1.254/SZJS.Components
+svn://192.168.1.254
+
+
+
+2011-11-03T06:56:14.609375Z
+488
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+818e474e-8ccb-db4b-8ccd-ddf760758e43
+
+SZJS.Resource.Task
+dir
+
+SZJS.All.Task
+dir
+
+SZJS.ElectronTicketbase.Task
+dir
+
+SZJS.Score.Task
+dir
+
+Club
+dir
+
+SZJS.ElectronTicket.Task
+dir
+
+SZJS.Lottery
+dir
+
+GetSportteryService
+dir
+
+SMS.Eucp.Gateway
+dir
+

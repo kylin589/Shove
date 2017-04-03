@@ -1,0 +1,114 @@
+﻿.wrap{border: 1px solid #ffb9a7; width: 984px;}
+.wrap .left{  width: 984px; overflow:hidden;}
+.wrap .left .main1{ margin: 1px 1px 0px 1px;background-image:url(../Images/caizhong_bg.gif);height:120px; }
+.wrap .left .main1 img{ float:left; display:block; margin-left:15px; margin-top:15px; }
+.wrap .left .main1 dl { float:right; margin-top:25px; width:850px;  }
+.wrap .left .main1 dl dt {line-height:20px; height:20px; }
+.wrap .left .main1 dl dt a{ color:#0048e1; }     
+.wrap .left .main1 dl dt a{ float:right; margin-right:30px; }        
+.wrap .left .main1 dl h1{ float: left;font-family: DFKai-SB;font-size: 20px; color: #333333; font-weight: bold;}
+.wrap .left .main1 dl h1 span{ color: #df2008;font-family: DFKai-SB;}
+.wrap .left .main1 dl dd{ margin-top:20px;}
+.wrap .left .main1 dl dd em{ color: #df2008;font-weight: bold; margin-left:5px;margin-right:5px;} 
+
+#con {FONT-SIZE: 12px; MARGIN: 0px auto; WIDTH:984px; height:auto;}
+#tags {WIDTH: 885px; HEIGHT: 28px; padding-left:99px;margin-bottom:0px; border-bottom:solid 5px #d02902;}    
+
+#tags LI
+{
+    background: url('../Images/tag_bg.gif') no-repeat left bottom;
+    float: left;
+    margin-right: 1px;
+    list-style-type: none;
+    height: 28px;
+    width:112px;
+}
+#tags LI A
+{
+    width: 112px;
+    display: block;
+    text-align: center;
+    float: left;
+    padding-bottom: 0px;
+    color: #a33200;
+    line-height: 28px;
+    padding-top: 0px;
+    height: 28px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#tags LI.emptyTag {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 4px
+}
+#tags LI.selectTag {
+	BACKGROUND-POSITION: left top; MARGIN-BOTTOM: -2px; POSITION: relative; HEIGHT: 28px
+}
+#tags LI.selectTag A
+{
+    background-position: right top;
+    color: #FFFFFF;
+    line-height: 28px;
+    height: 28px;
+}
+
+.mina{ width:964px; overflow:hidden; background-image: url('../Images/tab_input_bg.gif'); background-repeat: repeat-x; height:30px; display:block; margin-top:10px; padding-left:20px; }
+.mina  a{ font-size:12px; font-weight:bold; 
+float: left;
+margin-right: 10px;
+list-style-type: none;
+height: 30px;
+width: 80px; display:block; text-align:center; line-height:30px;
+          }
+.mina  a:hover ,.ahover{ background: url('../Images/jc_bg.jpg');}          
+
+.mina span{ margin-right:5px; line-height:21px; display:inline-block; float:left;  height:21px;}
+.mina .btn
+{
+	background-image: url('../Images/jc_btn.jpg');
+	background-repeat: no-repeat;
+	background-position: center center; width:71px; height:21px; display:block; margin-right:20px; 
+ position:absolute; 
+ z-index:1000;
+}
+.mina .btn .btnle{ width:170px;  overflow:hidden; position:absolute; background-color:#fff6f4;  display:none; z-index:999;top: 20px;  border:solid 1px #ef8d77; 
+left: 0px; padding-top:5px;}
+.mina .btn .btnle li{ padding-bottom:5px; float:left; width:78px; display:inline-block;}
+.mina .btn .btnle li input{ margin-top:2px;}
+.mina .btn .btnle li label{font: 12px/1.5 '宋体',tahoma; }
+.mina .marginleft{ margin-left:100px;}
+.mina span label{ float:left;}
+.mina span input{ float:left; margin-top:4px; line-height:21px; margin-right:2px; margin-left:15px;}
+
+.mina .marginleft{ margin-left:100px;}
+.mina .right{ margin-right:20px; float:right;}
+.mina .right select{ float:left; margin-left:10px;} 
+.p{ height:30px; line-height:30px; margin-left:50px;}
+.p span{ color:Red;}
+div table{ width:100%;}
+div table tr td{ border:solid 1px #FFF;}
+
+
+.wrap2{width: 986px; overflow:hidden; margin:0px auto 10px auto;}
+.dibu{ overflow:hidden; margin-top:5px;}
+.dibu .left{ width:430px; float:left;}
+.dibu .left table tr th{ height:30px; border:solid 1px #ffccaa; background-color:#fff4dd;color:#4b4a4a;}
+.dibu .left table tr td{border:solid 1px #dddddd; line-height:20px; text-align:center;}
+.dibu .left table tr td .simg{  height:35px; display:block; padding-top:10px;}
+
+
+.dibu .right{ width:550px; float:right;}
+.dibu .right table tr th{ height:30px; border:solid 1px #ffccaa; background-color:#fff4dd; color:#4b4a4a;}
+.dibu .right table tr td{border:solid 1px #dddddd; line-height:20px; text-align: left; text-indent:20px; height:30px;}
+.dibu .right table tr td span{ color:Red;}
+.dibu .right table tr td strong{color:#4b4a4a;}
+.btn_buy{
+background-image: url('../Images/tag_ljtz.gif');
+background-repeat: no-repeat;
+background-position: center center;
+height: 33px;
+width: 130px;
+display: block;
+text-indent: -9999px;
+border: 0px;
+margin-top:10px;  margin-bottom:10px; margin-left:20px;
+}

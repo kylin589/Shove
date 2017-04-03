@@ -1,0 +1,55 @@
+﻿.wrap
+{	font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+	
+	}
+.wrap dl
+{
+text-align: center;
+width:986px; height:65px;
+padding-top:7px;
+
+}
+.wrap dl dt{ display:block; line-height:30px; font-size:14px; font-weight:bolder; color:#58130d;}
+.wrap dl dd{ display:block; line-height:20px;}
+.wrap dl dd a{ margin-left:10px; margin-right:10px;}
+.lagger{ width:1000px;}
+.wrap #GridView1 { text-align:center; width:100%; background-color:#ffffff; border: solid 2px #eaafab; color:#000000; border-bottom-style:double; padding:2px;}
+.wrap #GridView1 tr td{border: solid 1px #eaafab; padding-top:2px; padding-bottom:2px;}
+.b{ font-weight:bolder; line-height:30px;} 
+
+.wrap .zst_top{background-image: url('../Images/zsu_bg.jpg'); width:986px; height:65px; overflow:hidden;}
+.wrap h1{ float:left; font-size:14px; font-weight:bolder; width:195px; text-align:center;color:#58130d; margin-top:20px; display:block;}
+.wrap ul
+{float:right;width:786px;
+ padding-top:10px;
+ display:block;
+ margin-top:10px;
+}
+
+.wrap ul li{ display:block; width:786px;  height:27px;}
+
+
+.wrap ul li span,.wrap ul li .input{ float:left; margin-left:10px; font-size:12px; display:block; margin-top:3px; height:18px; line-height:18px;}
+.wrap ul li span{ margin-top:5px; font-weight:bold;}
+.wrap ul li .input { border:solid 1px #fd7267; width:110px; }
+.wrap ul li a{ margin-left:30px; margin-top:5px; color:White; float:left}
+
+.wrap p
+{
+	line-height: 28px;
+	background-image: url('../Images/zst_a_bg.jpg');
+	background-repeat: repeat-x;
+}
+
+.wrap ul li  input{ display:inline-block; height:18px; line-height:18px; margin-top:-2px; }
+.wrap ul li  label{ display:inline-block;  margin-right:20px; height:18px; line-height:18px; margin-top:5px;}
+
+.wrap p a{ margin-left:5px; margin-right:5px; color:#222222}
+.wrap ul li .zst_btn{ border:0px; background-image:url('../Images/zst_btn_bg.gif'); width:80px; height:25px;  text-align:center; line-height:20px; color:White; margin-left:10px; float:left; margin-top:0px; }
+
+
+.wrap table{ text-align:center; width:100%; background-color:#ffffff; border: solid 2px #eaafab; color:#000000; border-bottom-style:double; padding:2px;}
+.wrap table tr td{border: solid 1px #eaafab; padding-top:2px; padding-bottom:2px;}
+
+#lbAd,#lbAd1,#lbAd2,.lbad{ display:none;}
+.wrap ul li a{ display:none;}

@@ -1,0 +1,125 @@
+﻿.titleBg{ height:30px;line-height:27px;background: url(../Help/Images/all_index.gif) left -30px repeat-x;margin-top:10px;}
+.titt{ margin-top:0;}
+.titleLeftBg{ height:30px; background:url(../Help/Images/all_index.gif) left 0px no-repeat;}
+.titleRightBg{ height:30px; background:url(../Help/Images/all_index.gif) right -60px no-repeat;}
+.title{ padding:0 3px 0 12px;line-height:30px;font-size:14px; height:30px; overflow:hidden;}
+.title span{ display:block;height:30px;padding-left:28px;background:url(../Help/Images/all_index.gif) 3px -90px no-repeat;}
+.title a{ float:right; margin-right:12px; color:#000; font-weight:normal; font-family:"宋体"}
+
+.index_content{background:#FFFFFF;border-color:#DBDBDB;border-right:1px solid #DBDBDB;
+border-style:solid;border-width:0 1px 1px;overflow:hidden;padding:5px 10px 10px;width:732px;}
+.f12{padding:0 10px;width:712px; line-height:30px; font-size:12px;}
+.f11 a{ font-size:14px;}.f11 p{ border-bottom:1px dashed #ccc;  line-height:40px;}
+.f12 h1{ font-size:12px; text-align:left; font-weight:bold; border-bottom:1px dashed #ccc; height:35px;line-height:35px;}
+
+.fun_left,.fun_right{float:left;padding:5px 14px;width:334px;}
+.fun_left .title,.fun_right .title{color:#bb2225;font-size:12px;font-weight:bold;padding-left:3px;}
+.fun_left p,.fun_right p{line-height:26px;}
+.fun_left a,.fun_right a{padding:0 3px;color:#333333;}
+.helpContent{ margin: auto; width: 986px; }
+.map table{ border-collapse:collapse; margin-top:12px;}
+.map table td{ border:1px solid #ccc;}
+
+.helpLeft{padding-top:12px; width: 220px; float:left; }
+.helpRight{padding-top:12px; width: 754px; float:right; }
+.helpCon-left{width: 220px; background:url("../Help/Images/help_07.jpg") repeat-y ; line-height:35px; }
+.helpCon-left li{width: 220px; background:url("../Help/Images/help_10.jpg") no-repeat  left bottom ; text-align:center;font-size:14px;}
+.helpCon-left li a{color:#333;font-size:14px; }
+.helpCon-left li a:hover{ font-weight:bold; color:#f00;}
+
+.table{ width:100%;  border-collapse:collapse;}
+.table thead td{ background:#eee;}
+.table td{  line-height:26px; text-align:center; border:1px solid #ccc;  }
+.table .tdbgcolor td{ background:#f6f6f6;}
+.red14{color: #F00;font-family: "tahoma";line-height: 20px;font-weight: bold;}
+
+.gn_left,.gn_right{width:335px; float:left; padding:10px 15px; }
+.gn_left .title,.gn_right .title{ font-weight:bold;}
+.qus_list{line-height:27px;padding:10px 0;overflow:hidden;font-size:14px;}
+.line_do{ font-weight:bold; font-size:14px; border-bottom:1px dashed #ccc;}
+
+
+
+
+
+
+.toubu
+{
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #e6e6e6;
+    color:#777777;
+    padding-top:3px;
+}
+.toubu .center
+{
+    width:986px;
+    margin:0 auto;
+    }
+.toubu .center .left
+{
+    float:left;
+    }
+ .toubu .center .right
+ {
+     float:right;
+     }
+.toubu a
+{
+    color:#cc1411;
+    } 
+
+.header{ margin: auto; width: 986px;    background-image: url('../Images/logo_bg2.jpg');    background-position: center top;
+    background-repeat: no-repeat; }
+.header .cdlist{border: 1px #EEEEEE solid; background: #FBFBFB; height: 23px; line-height: 23px; position: relative; z-index: 99;}
+.header .cdlist .setHome{float: left; padding-left: 10px;}
+.header .cdlist .setHome a{background: url(../Images/sethome_tit.gif) 0 5px no-repeat; padding-left: 10px; margin-right: 5px; color: #666666;}
+.header .cdlist ul{float: right;}
+.header .cdlist ul li{ margin-right: 10px; display:block;}
+.header .cdlist ul li a{color: #005AA0;}
+.header .cdlist ul li.mylottery{border: 1px #FFD098 solid; height: 18px; margin-top: 2px; line-height: 18px; padding: 0 4px; position: relative;}
+.header .cdlist ul li.mylottery a{background: url(../Images/tri.gif) 50px 6px no-repeat; padding-right: 12px; }
+.header .cdlist ul li.mylottery a:hover{text-decoration: none;}
+.header .cdlist ul li.mylottery .lot_list{background: url(../Images/mylottery_list_bg.gif) no-repeat #FFFFFF; border:1px #FFD098 solid; border-top:none; width: 104px;  position: absolute; right: -1px; top: 16px;}
+.header .cdlist ul li.mylottery .lot_list ul{margin: 7px; float: none;}
+.header .cdlist ul li.mylottery .lot_list li{margin: 0; height: 20px; line-height: 20px; float: none;}
+.header .cdlist ul li.mylottery .lot_list li .red{color: #FF0000;}
+.header .cdlist ul li.mylottery .lot_list li a{color: #666666; background: none; padding: 0;}
+.header .cdlist ul li.mylottery .lot_list li a:hover{text-decoration: underline;}
+.header .header_logo {
+
+    }
+.header .header_logo .logo{float: left; width: 150px; overflow: hidden;}
+.header .header_logo .logo a{width:150px; height: 75px; display: block; background: url(../Images/logo.gif) 0px 0px no-repeat;}
+
+.header .header_logo ul{float: right; padding-top: 10px; color: #FF0000;}
+.header .header_logo ul li{ height:27px; line-height:27px;margin-right: 10px;vertical-align:top; display:block;}
+.header .header_logo ul li.hotline{background:url(../Images/hotline.jpg) no-repeat;font-size: 14px; padding-left:27px; background-position: left center;}
+.header .header_logo ul li a{color: #005AA0;}
+
+.header .header_nav{
+    margin-top: 1px;
+    width: 986px;
+    background-image: url(../Images/dh_bg.jpg);
+    background-repeat: repeat-x;
+}
+.header .header_nav .lotterys{
+    float:left;
+    position: relative;
+    z-index: 1000;
+    background-image: url(../Images/header_bg.gif);
+    background-repeat: no-repeat;
+}
+.header .header_nav .lotterys .btn{background: url(../Images/header_bg.gif) -198px -38px no-repeat; width: 196px; height: 36px; text-align: center; line-height: 36px; font-size: 14px; font-weight: bold; color: #7F2D00; display: block; cursor: pointer;}
+.header .header_nav .lotterys .btnOn{background: url(../Images/header_bg.gif) 0 -38px no-repeat;}
+.header .header_nav .lotterys .btn .num{color: #95532F; font-size: 12px;}
+.header .header_nav .lotterys .btn_index{background: url(../Images/header_bg.gif) 0 -38px no-repeat;}
+.header .header_nav .lotterys .lotterysList{width: 194px; /*height:368px;*/ border:1px #C40E09 solid; border-top:none; background:#FFF6EE; position: absolute; top: 36px; left: 0px; z-index: 999}
+.lotterysList li{border-bottom: 1px #FFBA7C solid; margin-top: 7px; padding-bottom: 5px;}
+.lotterysList li.last{border-bottom: none;}
+.lotterysList .lot_left{width: 45px; float: left; color: #7F2D00; font-weight: bold; padding-top:27px; text-align: center; display: inline;}
+iframe{ border:0px; margin:0 auto; padding:0px; width:986px; overflow:hidden;}

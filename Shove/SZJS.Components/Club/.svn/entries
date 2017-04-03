@@ -1,0 +1,138 @@
+10
+
+dir
+502
+svn://192.168.1.254/SZJS.Components/Club
+svn://192.168.1.254
+
+
+
+2011-10-11T02:42:36.093750Z
+206
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+818e474e-8ccb-db4b-8ccd-ddf760758e43
+
+Control
+dir
+
+Event
+dir
+
+app.config
+file
+
+
+
+
+2011-11-05T02:02:12.549911Z
+6098c30c4ee739e5f988007e177ce308
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+120
+
+Aggregation
+dir
+
+Forum
+dir
+
+Common
+dir
+
+Properties
+dir
+
+Plugin
+dir
+
+Discuz.csproj
+file
+
+
+
+
+2011-11-05T02:02:12.552911Z
+8a94a37aa1413052175016c0ab794ef2
+2011-09-26T02:56:52.765625Z
+1
+admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21623
+
+Cache
+dir
+
+Config
+dir
+
+bin
+dir
+
+Data
+dir
+
+obj
+dir
+
+Entity
+dir
+
+Web
+dir
+

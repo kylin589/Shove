@@ -1,0 +1,72 @@
+﻿.home{ width:945px; overflow:hidden ; display:block; margin:0 auto; margin-top:10px;  overflow:hidden;}
+.hometop
+{
+    width: 945px;
+    height: 9px;
+    background-image: url('../images/home_top.jpg');
+    background-repeat: no-repeat;
+    font-size:0px;
+}
+.homebottom
+{
+    height: 9px;
+    background-image: url('../images/home_bottom.jpg');
+    background-repeat: no-repeat;
+     width: 945px;
+     font-size:0px;
+}
+.homecen
+{
+    border-style: none solid none solid;
+    border-width: 2px;
+    border-color: #fe9e5d;
+    background-color: #fee7d5;
+    width:929px;
+    overflow:hidden;
+    padding-right:6px;
+    padding-left:6px;
+}
+.homecen .left
+{
+    background-position: left top;
+    float: left;
+    width: 188px;
+    background-image: url('../images/name_bg.jpg');
+    background-repeat: no-repeat;
+ overflow:hidden;
+}
+.homecen .left .titl{ font-size:14px; color:#bb2225; font-weight:bold; display:block; padding-top:18px; text-indent:32px;}
+.homecen .left .name{ line-height:30px; text-align:center; padding-top:10px; padding-bottom:10px;}
+.homecen .left .name span{ color:Red;}
+.homecen .left .a{ height:20px; margin-top:20px;  text-indent:10px; }
+.homecen .left .a a{ margin-left:15px; margin-right:15px;}
+
+.homecen .left ul{ margin-top:30px; text-align:right;}
+.homecen .left ul li{ text-align:right; display:block;}
+.homecen .left ul li a{ width:160px; height:35px; text-align:center; display:block; float:right; line-height:35px; font-size:14px; color:#bb2225}
+.homecen .left ul li a:hover
+{
+    background-image: url('../images/li_bg.jpg');
+    background-repeat: no-repeat;
+}
+.homecen .left ul li .hover{background-image: url('../images/li_bg.jpg');
+    background-repeat: no-repeat}
+
+.homecen .right{ float:right; width:741px;}
+.homecen .right .top{ width:741px; height:5px; overflow:hidden;    background-image: url('../images/top_1.jpg');}
+.homecen .right .cen{width:721px; overflow:hidden;  background-color:White; padding:10px;  min-height:450px;}
+.homecen .right .bottom{width:741px; height:5px; overflow:hidden; background-image: url('../images/bottom1.jpg');}
+.btn
+{
+	background-image: url('../Images/btn.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width:100px; height:26px; display:inline-block;
+	 border:0px; text-align:center;
+	 margin:0 auto;
+}
+.text ,.in_text_hui
+{
+	border: 1px solid #808080;
+	height: 23px;
+}

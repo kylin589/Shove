@@ -1,0 +1,1994 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BuySFC.aspx.cs" Inherits="Lottery_BuySFC" %>
+
+<%@ Register Assembly="Shove.Web.UI.4 For.NET 3.5" Namespace="Shove.Web.UI" TagPrefix="ShoveWebUI" %>
+<%@ Register Src="../UserControls/Head.ascx" TagName="Head" TagPrefix="uc1" %>
+<%@ Register Src="../Home/Room/UserControls/WebFoot.ascx" TagName="WebFoot" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>胜负彩：看足球买彩票，2元可中￥500万！-胜负彩选号投注、合买、玩法介绍－<%=_Site.Name %></title>
+    <link rel="stylesheet" title="对于&quot;在浏览器中预览&quot;为禁用: ../Home/Room/Style/common.css" type="text/css" />
+<style type="text/css">
+
+body{
+    -webkit-text-size-adjust:none;
+
+}
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+img, input, select {
+    vertical-align: middle;
+}
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
+sub { vertical-align: text-bottom; }
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+input, select{vertical-align: middle;} /* 使得表单元素居中 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0;
+	height: 38px;
+}
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:visible;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+#cboxOverlay{background:#000;}
+/* icons 16x16 */
+.icon_valid_16x16, .icon_error_16x16, icon_info_16x16 {
+    background: url(../Home/Room/Images/icons_bg.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+}
+.icon_valid_16x16 {background-position: 0 -250px;}
+.icon_error_16x16 {background-position: 0 0;}
+.icon_info_16x16 {background-position: 0 -150px;}
+
+/* global ajax loader */
+/*
+#loader {line-height: 20px; height: 20px;}
+*/
+#loader img {float: left;}
+#loader span {margin-left: 10px; line-height: 20px;}
+
+.clear{clear: both;}
+.hidden{display: none;}
+.nospace{font-size: 0; height: 0; line-height: 0;}
+
+a:link, a:hover, a:visited {color: #0F3F94;}
+
+.red{color:red;}
+.blue{color:blue;}
+.green{color:green;}
+.grey{color:grey;}
+
+.header{ margin: auto; width: 986px; 	background-image: url('../Home/Room/Images/logo_bg2.jpg');	background-position: center -2px; margin-bottom:8px;
+	background-repeat: no-repeat; }
+.header .cdlist{border: 1px #EEEEEE solid; background: #FBFBFB; height: 23px; line-height: 23px; position: relative; z-index: 99;}
+.header .cdlist .setHome{float: left; padding-left: 10px;}
+.header .cdlist .setHome a{background: url(../Home/Room/Images/sethome_tit.gif) 0 5px no-repeat; padding-left: 10px; margin-right: 5px; color: #666666;}
+.header .cdlist ul{float: right;}
+.header .cdlist ul li{ margin-right: 10px; display:block;}
+.header .cdlist ul li a{color: #005AA0;}
+.header .cdlist ul li.mylottery{border: 1px #FFD098 solid; height: 18px; margin-top: 2px; line-height: 18px; padding: 0 4px; position: relative;}
+.header .cdlist ul li.mylottery a{background: url(../Home/Room/Images/tri.gif) 50px 6px no-repeat; padding-right: 12px; }
+.header .cdlist ul li.mylottery a:hover{text-decoration: none;}
+.header .cdlist ul li.mylottery .lot_list{background: url(../Home/Room/Images/mylottery_list_bg.gif) no-repeat #FFFFFF; border:1px #FFD098 solid; border-top:none; width: 104px;  position: absolute; right: -1px; top: 16px;}
+.header .cdlist ul li.mylottery .lot_list ul{margin: 7px; float: none;}
+.header .cdlist ul li.mylottery .lot_list li{margin: 0; height: 20px; line-height: 20px; float: none;}
+.header .cdlist ul li.mylottery .lot_list li .red{color: #FF0000;}
+.header .cdlist ul li.mylottery .lot_list li a{color: #666666; background: none; padding: 0;}
+.header .cdlist ul li.mylottery .lot_list li a:hover{text-decoration: underline;}
+.header .header_logo {
+
+	}
+.header .header_logo .logo{float: left;	width: 150px; overflow: hidden;}
+.header .header_logo .logo a{width:150px; height: 75px; display: block; background: url(../Home/Room/Images/logo.gif) 0px 0px no-repeat;}
+
+.header .header_logo ul{float: right; padding-top: 10px; color: #FF0000; width:188px; height:64px; overflow:hidden; display:inline-block;}
+.header .header_logo ul li{ height:27px; line-height:27px;margin-right: 10px;vertical-align:top; display:block;}
+.header .header_logo ul li.hotline{background:url(../Home/Room/Images/hotline.jpg) no-repeat;font-size: 14px; padding-left:27px; background-position: left center;}
+.header .header_logo ul li a{color: #005AA0;}
+
+.header .header_nav{
+	margin-top: 1px;
+	width: 986px;
+	background-image: url(../Home/Room/Images/dh_bg.jpg);
+	background-repeat: repeat-x;
+}
+.header .header_nav .lotterys{
+	float:left;
+	position: relative;
+	z-index: 1000;
+	background-image: url(../Home/Room/Images/header_bg.gif);
+	background-repeat: no-repeat;
+}
+.header .header_nav .lotterys .btn{background: url(../Home/Room/Images/header_bg.gif) -198px -38px no-repeat; width: 196px; height: 36px; text-align: center; line-height: 36px; font-size: 14px; font-weight: bold; color: #7F2D00; display: block; cursor: pointer;}
+.header .header_nav .lotterys .btnOn{background: url(../Home/Room/Images/header_bg.gif) 0 -38px no-repeat;}
+.header .header_nav .lotterys .btn .num{color: #95532F; font-size: 12px;}
+.header .header_nav .lotterys .btn_index{background: url(../Home/Room/Images/header_bg.gif) 0 -38px no-repeat;}
+.header .header_nav .lotterys .lotterysList{width: 194px; /*height:368px;*/ border:1px #C40E09 solid; border-top:none; background:#FFF6EE; position: absolute; top: 34px; left: 0px; z-index: 999}
+.lotterysList li{border-bottom: 1px #FFBA7C solid; margin-top: 7px; padding-bottom: 5px;}
+.lotterysList li.last{border-bottom: none;}
+.lotterysList .lot_left{width: 45px; float: left; color: #7F2D00; font-weight: bold; padding-top:27px; text-align: center; display: inline;}
+
+.lotterysList .lot_logo_1 ,.lotterysList .lot_logo_2 ,.lotterysList .lot_logo_3 ,.lotterysList .lot_logo_4 ,.lotterysList .lot_logo_5 ,.lotterysList .lot_logo_6  {background: url(../Home/Room/Images/lottery_logo_bg.gif) no-repeat;}
+.lotterysList .lot_logo_1{background-position: 10px 4px;}
+.lotterysList .lot_logo_2{background-position: 10px -48px ;}
+.lotterysList .lot_logo_3{background-position: 10px -100px ;}
+.lotterysList .lot_logo_4{background-position: 10px -152px ;}
+.lotterysList .lot_logo_5{background-position: 7px -206px ; }
+.lotterysList .lot_logo_6{background-position: 7px -270px; }
+.lotterysList .lot_right{width: 140px; float: left; padding-left: 5px;}
+.lotterysList .lot_right span{ float: left; line-height: 18px; text-align: left; width:70px; display: inline;}
+.lotterysList .lot_right span a{color: #7F2D00;font: 12px/1.5 \5b8b\4f53, sans-serif;}
+.lotterysList .lot_right span a.label{display:inline-block;width:27px;color:#FFF;background:url(../Home/Room/Images/label.gif) 1px 2px no-repeat;padding-left:5px;text-align:center;text-decoration: none;}
+.lotterysList .lot_right span a.small_label{display:inline-block;width:14px;color:#FFF;background:url(../Home/Room/Images/small_label.gif) 1px 2px no-repeat;padding-left:5px;text-align:center;text-decoration: none;}
+
+.header .header_nav .nav{
+	float:left;
+	margin-left: 5px;
+	display: inline;
+
+	width:784px;
+}
+.header .header_nav .nav li{float: left; height: 30px; line-height: 30px; text-align:center; display: inline;position:relative; padding: 0 3px 0 3px;}
+.header .header_nav .nav li a
+{
+	font-size: 14px;
+	color: #000;
+	display: block;
+	font-weight: normal;
+	text-decoration: none;
+	width: 80px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-image: url(../Home/Room/Images/daohang_bg.jpg);
+}
+
+.header .header_nav .nav li a:hover
+{
+	background-position: center top;
+	background-image: url(../Home/Room/Images/daohang_bg.jpg);
+	font-weight: bold;
+	color: #fff;
+}
+
+.header .header_nav .nav li.on a{background: #FFFFFF; font-weight:bold; color: #AF0000; height: 30px; line-height: 24px; margin-top: 6px;}
+.header .header_nav .nav li.last{background: none;}
+/*foot*/
+.foot_box{width: 986px; margin: 0 auto;}
+.foot_box .link_box{border: 1px #CFCFCF solid; background: #F4F4F4; padding: 5px; margin-top: 10px;}
+.foot_box .link_box .link_main{border: 1px #DEDEDE solid; background: #FFFFFF; padding: 5px 10px; line-height: 22px; color: #888888;}
+.foot_box .link_box .link_main a{color: #888888; margin-right: 12px;}
+.foot_box .link_box .link_main a.red{color: #FF0000;}
+.foot_box .link_box .link_main a.red:hover{text-decoration: underline;}
+.foot_box .link_box .link_main a:hover{color: #FF0000; text-decoration: none;}
+.foot_box .link_box .link_main .weibo{margin-left: 75px;}
+.foot_box .link_box .link_main .weibo a{margin-right: 2px;}
+
+.foot_box .about_box{border-top: 1px #CFCFCF solid; margin-top: 10px;}
+.foot_box .about_box .about_left{float: left; padding: 8px 0;}
+.foot_box .about_box .about_left a{margin-right: 3px;}
+.foot_box .about_box .about_left .about_link{margin-bottom: 10px; line-height: 22px; color: #006FC5;}
+.foot_box .about_box .about_left .about_link a{margin:0 5px; color: #006FC5;}
+.foot_box .about_box .about_left .about_link a:hover{color: #FF0000; text-decoration: none;}
+.foot_box .about_box .about_right{float: left; padding: 15px 0 0 25px;}
+.foot_box .about_box .about_right p{height: 24px; color: #888888;}
+.foot_box .about_box .about_right a{color: #888888;}
+.foot_box .about_box .about_right a:hover{color: #FF0000; text-decoration: none;}
+
+/*搜狗合作样式*/
+.bannar_8888{float:left; margin-top:35px; background: url(../Home/Room/Images/sogou.gif) no-repeat; width:210px; height: 30px; }
+.bannar_5000{float:left; margin-top:15px; background: url(../Home/Room/Images/baidu.jpg) no-repeat; width:240px; height: 50px; }
+
+/*tooltip*/
+.tooltip_box{background:#FFFFFF; border:1px #999999 solid; display:none; line-height:20px;padding:5px; position:absolute;}
+
+/*浮动登录层的样式*/
+.fl_box{border: 1px #7B0C26 solid; width: 600px; background: #FFFFFF; overflow: hidden;}
+.fl_box .fl_top{background: url(../Home/Room/Images/fl_title_bg.gif) repeat-x; height: 36px;}
+.fl_top .fl_title{float: left; background: url(../Home/Room/Images/fl_icon.gif) 0 -215px no-repeat; line-height: 32px; font-size: 14px; font-weight: bold; color: #FFFFFF; margin-left:10px; padding-left: 25px;}
+.fl_top .fl_close{float: right; background: url(../Home/Room/Images/fl_icon.gif) 0 -53px no-repeat; width:52px; height: 19px; margin-right: 10px; cursor: pointer; }
+.fl_main .fl_left{float: left; width: 285px;}
+.fl_left .reg_box{margin-top:25px; border-right: 1px #E6E6E6 solid;}
+.reg_box h1{font-size: 14px; font-weight: normal; margin-left: 40px; color: #E60012; font-weight: bold;}
+.reg_box ul{ margin-left: 25px;}
+.reg_box li.r1,.reg_box li.r2,.reg_box li.r3{ height: 40px; line-height: 40px; font-size: 14px; margin-top: 15px;}
+.reg_box li.r1{background: url(../Home/Room/Images/fl_icon.gif) no-repeat 0 -160px; padding-left: 60px;}
+.reg_box li.r2{background: url(../Home/Room/Images/fl_icon.gif) no-repeat 10px -97px; padding-left: 60px;}
+.reg_box li.r3{padding-left: 30px; margin-top: 15px; margin-bottom: 10px;}
+.fl_left a.reg_b{background: url(../Home/Room/Images/fl_icon.gif) no-repeat -160px 0; width: 151px; height: 40px; display: block; margin-bottom: 20px;}
+.fl_left a.reg_b:hover{text-decoration: none;}
+
+/*全局警告窗口*/
+#alert_window_box.fl_box{width: 415px;}
+.fl_box h4{padding: 20px 40px; font-size: 16px;}
+.fl_box .button_list{text-align: center; padding: 5px;}
+
+.fl_main .fl_right{float: left;}
+.fl_right .login_box{margin-top: 18px; margin-left: 15px;}
+.login_box h1{background: url(../Home/Room/Images/fl_icon.gif) -67px -47px no-repeat; height: 32px; line-height: 32px; font-size: 14px; color: #E60012; padding-left: 40px;}
+.login_box table{ margin: 25px 25px 10px 25px;}
+.login_box tr{height: 40px;}
+.login_box td.t{text-align: right; font-weight: bold;}
+.login_box .text{ width: 161px; height: 26px; border: 1px #BCBCBC solid; color:#333; font-size: 14px; font-weight: bold;}
+.login_box .imgcode{ width: 100px; margin-right: 4px;}
+.login_box .submit{background: url(../Home/Room/Images/fl_icon.gif) 0 0 no-repeat; width: 151px; height: 40px; border: 0px; cursor:pointer;}
+#float_login_tpl .login_box .alipay_quick{background:url(../Home/Room/Images/alipay_quick_small.png) no-repeat;width:115px; height:25px;display:inline;margin-left:36px;float:left;}
+#float_login_tpl .login_box .baidu_login{float: left; display: inline; margin-left: 8px; text-decoration:underline;}
+
+/*全局的提示信息窗口*/
+.tip_window_border{width: 381px; border: 5px solid #ffffff; padding: 3px; background-color: #ff9600;}
+.tip_window_border .content_box{background-color: #ffffff;}
+.tip_window_border .content_box .close{float: right; height: 20px; width: 18px; background: #ffffff url(../Home/Room/Images/tip_close.png) no-repeat top right; margin-right: 5px; display: inline; cursor: pointer;}
+.tip_window_border .content_box h4{font-size: 14px; color: red; font-weight: normal; margin: 0 28px;}
+.tip_window_border .content_box .content{font-size: 14px; color: #ff00ff; font-weight: normal; margin: 0 28px; padding: 10px 0 35px 0;}
+
+/*新的错误和成功提示浮层样式*/
+.alert_window_box{width: 392px;}
+.success_box{width: 327px;}
+.alert_border{padding: 5px; background:rgba(192,181,155,.6); background:#c0b59b\9; filter:alpha(opacity=60); zoom:1;}
+.alert_box{border: 1px #F26C4F solid; background: #FFFFFF; position: relative; overflow: hidden; zoom:1;}
+.alert_box .alert_top{background: url(../Home/Room/Images/tishi_title_bg.gif) 0 0 repeat-x; height: 31px; border: 1px #FFCD5E solid;}
+.alert_top .alert_title{float: left; line-height: 32px; font-size: 14px; font-weight: bold; color: #FFFFFF; margin-left:10px;}
+.alert_top .alert_close{float: right; background: url(../Home/Room/Images/tishi_bg.gif) 0 -38px no-repeat; width:21px; height: 20px; margin-right: 10px; margin-top:6px; cursor: pointer; display: inline;}
+.success_close{float: right; background: url(../Home/Room/Images/tishi_bg.gif) -28px -38px no-repeat; width:11px; height: 11px; margin-right: 7px; margin-top:6px; cursor: pointer; display: inline;}
+.alert_box .alert_main{background: #FFFFFF; padding: 20px 20px 15px;}
+.alert_main .icon_error{background: url(../Home/Room/Images/tishi_bg.gif) 20px -100px no-repeat; height: 55px; width: 90px; float: left; }
+.alert_main .icon_success{background: url(../Home/Room/Images/tishi_bg.gif) -80px -100px no-repeat; height: 55px; width: 90px; float: left;}
+.alert_main .icon_tip{background: url(../Home/Room/Images/tishi_bg.gif) -185px -100px no-repeat; height: 55px; width: 90px; float: left;}
+.alert_main .alert_content{float: left; margin-top: 15px; padding-bottom: 20px; width: 250px;}
+.alert_main .success_content{width: 180px;}
+.alert_main .alert_content h4{font-size: 14px;}
+.alert_main .alert_content .detail{padding-top: 6px;}
+.alert_main .alert_content .f14{font-size: 14px;}
+.alert_main .alert_sbt{text-align: center;}
+.alert_main .alert_sbt .sub_btn{background: url(../Home/Room/Images/tishi_bg.gif) -141px -38px; width: 77px; height: 28px; font-weight: bold; border: none; font-size: 14px; cursor: pointer;}
+.blank_btn{width:77px;height:28px;border:none;cursor:pointer;background-color:#FFF;}
+
+/*全局的分页样式*/
+.page input {border: 1px solid #ccc;}
+.page .page_num, .page .page_goto {height: 20px; line-height: 20px;}
+.page .page_goto {padding: 0 5px;}
+
+/*彩种投注频道页面样式*/
+.gcmain{width: 986px; margin: auto;}
+.gcmain .gcleft{float:left; width: 704px;}
+
+.gcleft .tztop{border-top: 1px #FFD694 solid; border-left:1px #DBDBDB solid; border-right: 1px #DBDBDB solid; background: url(../Home/Room/Images/lottery/tztop_bg.gif) repeat-x;margin-top:10px;}
+.tztop .tzlogo{float: left;}
+.tztop .tzxx{float: left; width: 350px; line-height: 22px;}
+.tztop .tzxx h2{color: #FF0000; font-weight: bold; font-size: 14px; line-height: 30px;}
+.tztop .tzxx h2 span{color:#FD980A;padding-left:12px;}
+.tztop .term{float: right; font-size: 14px; font-weight: bold;  margin-right: 10px; margin-bottom:20px; display: inline;}
+.tztop .term span{color: #FF0000;margin: 0 5px;}
+.tztop .icon_links{text-align:right;padding-right:10px;}
+.tztop .icon_links a{display:inline-block;padding-left:16px;text-align:left;margin-left:6px;}
+.tztop .icon_links .link_rule{background:url(../Home/Room/Images/wenhao.gif) 0 2px no-repeat;width:48px;}
+.tztop .icon_links .link_trend{background:url(../Home/Room/Images/zst.gif) no-repeat;width:36px;padding-left:18px;}
+.gcleft .tznav{border-bottom: 3px #F79E09 solid; border-left:1px #DBDBDB solid; border-right: 1px #DBDBDB solid;}
+.tznav ul{margin-left: 30px;}
+.tznav li{color: #333333; float: left; background: url(../Home/Room/Images/lottery/lottery_bg.gif) -83px 0 no-repeat; width: 79px; height: 30px; line-height: 30px; text-align: center; margin-right: 5px; font-size: 14px;}
+.tznav li.on{background: url(../Home/Room/Images/lottery/lottery_bg.gif) 0 0 no-repeat; font-weight: bold;}
+.tznav li a:link,.tznav li a:visited{color: #333333; display: block;}
+.tznav li a:hover{text-decoration: none;}
+.gcleft .jztime{float: right; margin-right: 5px; display: inline; line-height: 30px;}
+.gcleft .jztime span{color: #FF0000;}
+
+/* 每个彩种的合买方案列表 */
+.syndicate_box{margin-top: 10px; border: 1px #CFCFCF solid;}
+.syndicate_box .title{background: url(../Home/Room/Images/lottery/js_tit_bg.gif); border-bottom: 1px #CFCFCF solid; height: 27px; padding-left: 15px; line-height: 27px;}
+.syndicate_box .title h3{color: #FF0000;}
+
+.syndicate_table{width: 100%; text-align: center; border: 1px #FFFFFF solid;}
+.syndicate_table td{height:30px;}
+.syndicate_table .title{background: url(../Home/Room/Images/lottery/dc_title_bg.gif) repeat-x; color: #FFFFFF;}
+.syndicate_table .title td{padding: 0 10px;}
+.syndicate_table .title .left{float: left;}
+.syndicate_table .title .search{float: right;}
+.syndicate_table .title .search .text{border: 1px #AFAFAF solid; height: 20px; width: 90px; color: #999999;}
+/*
+.syndicate_table .title .search .btn{background: url(../Images/lottery/hm_search_bg.gif) no-repeat; height: 18px; width: 61px; border: none; cursor: pointer; margin-left: 2px;}
+*/
+
+.syndicate_table .tit{background: #FFF4DA;}
+.syndicate_table .bgcolor{background: #EEEEEE;}
+.syndicate_table .text{width: 39px; height: 18px; border: 1px #94A3BD solid;}
+.syndicate_table a.blue{color: #0000FF;}
+.syndicate_table td.process{line-height: 15px; text-align: left; padding-left: 10px;}
+.syndicate_table td.process span{display: block; font-size: 10px;}
+.syndicate_table td.process span.reserved{display: inline; font-size: 12px; margin: 0;}
+.syndicate_table td.process .tag{border: 1px solid #B3B3B3; font-size: 0; height: 3px; overflow: hidden; width: 60px;}
+.syndicate_table td.process .tag i{background:url(../Home/Room/Images/lottery/syndicate_progress_bg.gif) repeat-x; display: block; height: 3px;}
+.syndicate_table .buy_btn{text-decoration: none; margin: 5px 20px 5px 0; display: block; width: 114px; height: 27px;}
+
+.syndicate_table td.no_hemai{color: #0075A9; padding: 30px 0;}
+.syndicate_table td .hemai_btn{background: url(../Home/Room/Images/lottery/lottery_bg.gif) -286px -200px no-repeat; width: 128px; height: 40px; border: 0; cursor: pointer; margin-top: 10px;}
+
+.syndicate_table td .red{color: #FF0000;}
+.syndicate_table td .page_list{margin:0 30px;  float: left; color: #0075A9; padding-top: 4px;}
+.syndicate_table td  select{border: 1px #ABADB3 solid; width: 60px; height: 17px; margin: 0 5px;}
+.syndicate_table td .page{ float: right; margin-right: 10px; padding-top: 2px;}
+.syndicate_table td .page a,.syndicate_table td .page strong{border: 1px #CECECE solid; height: 20px; line-height: 20px; text-align: center; color:#0075A9; float:left; padding: 0 6px; margin-right: 2px;}
+.syndicate_table td .page strong{background: #0096CE; color: #FFFFFF;}
+.syndicate_table td .text{width: 25px; height: 16px; border: 1px #CECECE solid; margin: 0 3px 0 0;}
+
+.syndicate_box .syndicate_more{text-align: right; padding: 10px 20px 10px 0;}
+
+#toptray_login span.span_login_rmb{ font-size: 12px; font-weight: bold; color:#F00; margin-left:6px;}
+#toptray_login span.span_login_rmb_2{ font-size: 12px; font-weight: bold; color:#F00;height:18px;line-height: 18px;}
+.dashed_bottom{border-bottom: 1px dashed red;} 
+#toptray_login .header_show_money{ height:23px;}
+#toptray_login .header_show_money a,#toptray_login .header_show_money span{ float: left;}
+#toptray_login .header_show_money img{ float: left; margin-top: 5px;cursor: pointer;}
+#wallet_container{position:relative; float: left;}
+#wallet_detail{border:2px solid #E0E0E0;background-color:#FEFDC2;padding:8px;z-index:10;position:absolute;white-space:nowrap;line-height:20px;top:22px;left:0; width: 160px;}
+#wallet_detail p {display: block; width: 100%;}
+#wallet_detail a.account_detail{float:right;}
+.i-a, .i-b
+{
+    width: 30px;
+    margin-right: 3px;
+    padding: 2px;
+    height: 16px;
+    font: 12px/16px simsun;
+    border: 1px solid #ffb9a7;
+}
+.i-c{
+width: 580px;
+margin-right: 3px;
+padding: 2px;
+height: 16px;
+font: 12px/16px simsun;
+border: 1px solid #ffb9a7;
+}
+.i-d
+{
+width: 580px;
+margin-right: 3px;
+padding: 2px;
+height: 100px;
+font: 12px/16px simsun;
+border: 1px solid #ffb9a7;
+    
+    }
+
+
+
+
+</style>
+    <link rel="stylesheet" title="对于&quot;在浏览器中预览&quot;为禁用: ../Home/Room/Style/StyleSheet.css" type="text/css" />
+<style type="text/css">
+
+.toubu
+{
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #e6e6e6;
+    color:#777777;
+    padding-top:3px;
+}
+.toubu .center
+{
+    width:986px;
+    margin:0 auto;
+    }
+.toubu .center .left
+{
+    float:left;
+    }
+ .toubu .center .right
+ {
+     float:right;
+     text-align:right;
+     }
+.toubu a
+{
+    color:#cc1411;
+    }            
+.qq
+{
+    background-image: url('../Home/Room/Images/QQ.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left:30px;
+}
+
+.left_main
+{
+    overflow:hidden;
+    }
+
+.quick_buy {
+width: 380px;
+overflow: hidden;
+padding-top:7px;
+padding-left:10px;
+float:left;
+}
+#cr,#cr1
+{
+    color: #808080;
+}
+.quick_buy input
+{
+    border: 0 none;
+    background-image: url('../Home/Room/Images/hong_bg.jpg');
+    float: left;
+    width: 38px;
+    height: 38px;
+    
+    border: none;
+    line-height: 38px;
+    font: 700 16px/22px arial;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+    margin-right:4px;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    position:relative;
+    *padding-top:9px;
+    *height:29px;
+}
+#ssq_blue_qiu_0
+{
+        background-image: url('../Home/Room/Images/lan_bg.jpg');
+
+    }
+.icon_ssq
+{
+    width: 77px;
+    float: left;
+    display: block;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    font-family: 黑体;
+     overflow:hidden;
+}
+.icon_ssq img{ width:77px; height:77px;}
+.quick_buy dd
+{
+    float:right;
+    width:300px;
+    }
+ .quick_buy dd span
+{
+	display: block;
+	text-align: left;
+	margin-top: 5px;
+	color: #333333;
+	padding-left: 10px;
+} 
+.quick_right
+{
+    width:350px;
+    float:right;
+    } 
+  .quick_right table tr td
+{ text-align:right;
+    } 
+ .quick_right table tr td table{  margin-right:10px;}   
+   .quick_right table tr td table tr td{  height:30px; }     
+    
+.quick_right .you
+{
+    float:left;
+    width:180px;
+   padding-top:5px;
+    }
+ .quick_right .you li
+ {
+     margin-top:15px;
+     }
+  .quick_right .you li a{ font-weight:bold; margin-right:5px;}           
+.buy_button {
+padding-top: 10px;
+width: 140px;
+height: 80px;
+float: right;
+}     
+.btn_send
+{
+	background-position: center center;
+	background: url("../Home/Room/Images/touzhi_bg.gif");
+	border: 0px;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	height: 29px;
+	line-height: 29px;
+	margin: 5px 0;
+	text-align: center;
+	width: 118px;
+	background-repeat: no-repeat;
+}
+.sel-input {
+margin: 5px 0;
+background: url("../Home/Room/Images/indexBg_v1.0.gif") no-repeat -4px -449px;
+width: 70px;
+height: 25px;
+text-align: center;
+border: 0px;
+cursor: pointer;
+float: left;
+}
+.clear-input {
+background: url("../Home/Room/Images/indexBg_v1.0.gif") no-repeat scroll -26px -485px transparent;
+color: black;
+cursor: pointer;
+display: inline-block;
+height: 25px;
+line-height: 22px;
+margin: 5px 1px;
+text-decoration: none;
+width: 46px;
+border: 0;
+float: left;
+}
+.shuangseqiu
+{
+    display:block;
+    padding-left:15px;
+    padding-right:20px;
+    overflow:hidden;
+    width:745px;
+    margin-top:5px;
+}
+.shuangseqiu span
+ {
+ 	}
+.shuangseqiu span ,.shuangseqiu b
+ {
+     margin-right:20px;
+     }
+.shuangseqiu span ,.shuangseqiu i, .shuangseqiu b, .shuangseqiu a{float:left;}
+#toCurrIsuseEndTime,#currIsuseName
+{
+	line-height:18px; 
+	} 
+        
+.shuangseqiu  em
+{ float:right;
+  font-weight:normal; padding-right:50px;font: 12px/1.5 '宋体',tahoma; font-variant:5px;
+            }
+.shuangseqiu a{ font-weight:bold;}            
+        
+.shuangseqiu b {
+height: 16px;
+padding: 0 3px;
+border: 1px solid #427400;
+border-left: none;
+font-weight: normal;
+overflow: hidden;
+}
+.jz_time {
+width: 57px;
+height: 18px;
+line-height: 18px;
+background: url(../Home/Room/Images/touzhu_pic.gif) no-repeat -156px -89px;
+color: white;
+text-align: center;
+font-style: normal;
+
+}        
+
+.txtarea {
+width: 213px;
+height:120px;
+font: 700 16px/22px arial;
+line-height:20px;
+ text-indent:5px;
+  color:#222222;
+  border: 1px solid #ffb9a7;
+
+}
+.txtheight{height:99px;}
+
+.random_btn
+{
+    margin-left: 10px;
+    background: url('../Home/Room/Images/lottery_bg.gif') no-repeat -261px 0;
+    width: 89px;
+    height: 27px; margin-bottom:3px;
+    color: #E60000;
+    border: 0;
+    cursor: pointer;
+}
+ .del_btn {
+margin-left: 10px;
+background: url('../Home/Room/Images/lottery_bg.gif') -353px 0 no-repeat;
+width: 89px;
+height: 27px;
+color: #555;
+border: 0;
+cursor: pointer;
+margin-bottom:3px;
+}
+
+/*高频购彩切换部份*/
+#and5 iframe{ padding:0px; margin:0px; width:780px; height:136px;}
+#and5 .left_main
+{ 
+ width:780px;
+  position:relative;
+  left:0px;
+  display:block;
+  }
+#and5 .left_main .quick_buy
+{
+    width:300px;
+    }
+    #and5 .left_main dd
+{
+    width:215px;
+    } 
+#and5 .left_main .quick_right
+{
+    padding-top:10px;
+    width:450px;
+    }
+#and5 .shuangseqiu em span
+{
+	 margin-right:137px;
+}
+
+
+/*登录部份样式*/ 
+#index_login table h1 {     line-height: 28px; } 
+#index_login table td {     padding: 2px 0; }
+#index_login table .width{ padding-left:51px; *padding-left:48px;} 
+#index_login table td .submit {background: url('../Home/Room/Images/button_bg.gif') 0 -150px no-repeat; border: 0 none; cursor: pointer;height: 28px;margin: 5px 0;  width: 76px;  float:left; } 
+#index_login .alipay_quick_small{background:url('../Home/Room/Images/alipay_quick_index.png') no-repeat center center; display:inline-block;height:28px;width:97px; padding-top:8px; line-height:28px;  float:left;}
+#index_login .baidu_login{ overflow:hidden; padding-right:28px;} .baidu_login a{text-decoration:none; float:right; display: inline; } 
+#index_login .baidu_login a:hover{color: #FF0000; text-decoration: none;} 
+
+
+
+/*注册样式*/
+.wrap
+{   
+ margin:0 auto;
+ width:986px;
+ overflow:hidden;
+ }
+
+
+
+.logosearch{ width:986px; margin:0 auto;padding:15px 0 25px; background:url(../Home/Room/Images/bg_logosearch.png) no-repeat;}
+
+/*float:left;*/
+
+.register_jr, .reg_top_jr, .step2_1_jr, .step2_2_jr, .step3_1_jr, .step3_2_jr, .step3_3_jr { float:left; }
+
+.step2_1_jr, .step2_2_jr, .step3_1_jr, .step3_2_jr, .step3_3_jr { height:37px; padding-left:114px; }
+
+/*public*/
+
+input{padding:0 0;margin:0 0;}
+
+/*register start*/
+
+.register_jr { width:986px; background:url(../Home/Room/Images/bg_register_jr.gif) no-repeat; }
+
+.reg_top_jr { height:26px; padding-left:31px; width:910px; line-height:26px; overflow:hidden; color:#ffffff; }
+
+.step2_1_jr { width:331px; background:url(../Home/Room/Images/step2_jr.gif) no-repeat; }
+
+.step2_2_jr { width:331px; background:url(../Home/Room/Images/step2_jr.gif) no-repeat left -37px; }
+
+.step3_1_jr { width:447px; background:url(../Home/Room/Images/step3_jr.gif) no-repeat; }
+
+.step3_2_jr { width:447px; background:url(../Home/Room/Images/step3_jr.gif) no-repeat left -37px; }
+
+.step3_3_jr { width:447px; background:url(../Home/Room/Images/step3_jr.gif) no-repeat left -74px; }
+
+.reg_content_jr { float:left; width:744px; margin-left:102px; padding-top:23px; display:inline; }
+
+.reg_serveread_jr { width:727px; height:512px; margin:0 auto; overflow-y:scroll; margin-top:30px; line-height:20px; text-indent:0px; }
+
+.reg_content_jr table { margin:0 auto; }
+
+.reg_content_jr table td { line-height:46px; text-indent:5px; }
+
+.reg_content_jr tr.tdunderline_jr td { border-bottom:solid 1px #cdcdcd; padding-bottom:19px; }
+
+.reg_content_jr tr.tdunderline_jr td.serveread { border-bottom:solid 1px #cdcdcd; color:#606060; font-size:16px; font-weight:bolder; padding-bottom:0px; text-align:center; padding-left:0; }
+
+td.edititem_jr { color:#727272; font-size:15px; text-align:right; }
+
+td.normal_jr { color:#373737; font-size:13px; }
+
+.reg_remarks_jr { margin:0 auto;/*height:16px;*/ width:599px; background:url(../Home/Room/Images/bg_registeremarks_jr.gif) no-repeat; padding-top:16px; }
+
+.reg_remarks_items_jr { float:left; height:36px; color:#626262; background:url(../Home/Room/Images/ico_arrow_jr.gif) no-repeat left 20px; }
+
+.reg_activation_jr { float:left; height:57px; width:361px; border:solid 5px #f8f8f8; margin:15px auto 21px 5px; }
+
+.reg_activation_border_jr { float:left; height:43px; width:339px; border:solid 1px #dcdcdc; padding-top:12px; padding-left:10px; }
+
+/*.active_next_jr { margin:0 auto; width:678px; height:26px; background:url(../Images/active_next_jr.gif); margin-bottom:18px; margin-top:18px; }*/
+
+.active_next_jr { margin:0 auto; width:678px; height:26px;margin-bottom:18px; margin-top:18px;line-height:28px;overflow:hidden;background-color:#f9f9f9;color:#2a78ba;font-weight:bolder;}
+
+.active_bottom01_jr { float:left; width:101px; height:29px; background:url(../Home/Room/Images/ico_active_bottom01_jr.gif) no-repeat; color:#666666; font-weight:bolder; line-height:29px; padding-left:22px; }
+
+.active_bottom02_jr { float:left; width:101px; height:29px; background:url(../Home/Room/Images/ico_active_bottom02_jr.gif) no-repeat; color:#666666; font-weight:bolder; line-height:29px; padding-left:22px; }
+
+.active_bottom03_jr { float:left; width:101px; height:29px; background:url(../Home/Room/Images/ico_active_bottom03_jr.gif) no-repeat; color:#666666; font-weight:bolder; line-height:29px; padding-left:22px; }
+
+.active_bottom04_jr { float:left; width:101px; height:29px; background:url(../Home/Room/Images/ico_active_bottom04_jr.gif) no-repeat; color:#666666; font-weight:bolder; line-height:29px; padding-left:22px; }
+
+.active_bottom05_jr { float:left; width:101px; height:29px; background:url(../Home/Room/Images/ico_active_bottom05_jr.gif) no-repeat; color:#666666; font-weight:bolder; line-height:29px; padding-left:22px; }
+
+.active_bottomintro_jr { float:left; width:110px; padding-left:6px; line-height:18px; text-indent:0px; color:#909090; }
+
+.active_bottomintro_jr a { color:#909090; text-decoration:underline;}
+
+.active_bottomintro_jr a:hover { color:#f45a00; text-decoration:underline; }
+
+/*register end*/
+
+/*login start*/
+
+.login_jr { float:left; width:950px; }
+
+.login_left_jr { float:left; width:520px; }
+
+.login_right_jr { float:right; width:360px; height:357px; background:url(../Home/Room/Images/bg_loginbord_jr.gif) no-repeat; }
+
+.text_login_jr { float:left; width:520px; height:53px; background:url(../Home/Room/Images/text_login_jr.gif) no-repeat 7px 25px; border-bottom:solid 1px #cfcfcf; }
+
+ul.intro_login_jr, ul.intro_login_jr li { float:left; margin:0 0; padding:0 0; list-style:none; width:428px; }
+
+ul.intro_login_jr { margin-top:10px; margin-left:11px; }
+
+ul.intro_login_jr li { border-bottom:dashed 1px #dbdbdb; padding-top:13px; padding-bottom:6px; }
+
+ul.intro_login_jr li.bottom_jr { border-bottom:none; }
+
+ul.intro_login_jr li span { float:left; width:48px; height:29px; color:#006699; font-weight:bolder; font-size:13px; line-height:26px; padding-left:31px; }
+
+ul.intro_login_jr li em { color:#909090; font-size:13px; font-style:normal; text-align:left; line-height:26px; }
+
+ul.intro_login_jr li em a{color:#909090;}
+
+ul.intro_login_jr li em a:hover{color:#ff5500;text-decoration:underline;}
+
+.login_intro01_jr { background:url(../Home/Room/Images/ico_active_bottom01_jr.gif) no-repeat; }
+
+.login_intro02_jr { background:url(../Home/Room/Images/ico_active_bottom03_jr.gif) no-repeat; }
+
+.login_intro03_jr { background:url(../Home/Room/Images/ico_active_bottom02_jr.gif) no-repeat; }
+
+.login_intro04_jr { background:url(../Home/Room/Images/ico_active_bottom04_jr.gif) no-repeat; }
+
+.login_border_jr { float:left; padding-left:28px; padding-top:10px; width:320px; height:195px; }
+
+.login_border_jr td { line-height:39px;text-indent:0px;}
+
+.login_border_jr tr.login_line_jr td { line-height:20px; }
+
+.login_btn_jr { float:left; padding-left:90px; padding-top:35px; width:173px; height:10px; }
+
+/*login end*/
+
+/*spec*/
+
+.indent_align_jr {padding-right:3px; height:24px;}
+
+.indent_align_r_jr {height:24px;}
+
+.indent_align_jr a {line-height:24px;}
+
+.indent_align_r_jr a {line-height:24px;}
+
+/*check tips*/
+
+.reg_check_normal_jr { width:258px; background:url(../Home/Room/Images/reg_check_normal_jr.gif) no-repeat;text-indent:26px;}
+
+.reg_check_error_jr { width:258px; background:url(../Home/Room/Images/reg_check_error_jr.gif) no-repeat;text-indent:26px;}
+
+.reg_check_right_jr { width:30px; background:url(../Home/Room/Images/ico_right_jr.gif) no-repeat; }
+
+.reg_check_normal_jr, .reg_check_error_jr, .reg_check_right_jr { float:left; height:26px; line-height:26px; position:relative;left:-31px;*left:-33px;}
+
+/*controls*/
+
+/*input*/
+
+.input226_24_jr { width:226px; background:url(../Home/Room/Images/bg_txt226_jr.gif) no-repeat;}
+
+.input188_24_jr { width:188px; background:url(../Home/Room/Images/bg_txt188_jr.gif) no-repeat;}
+
+.input80_24_jr { width:80px;height:24px;background:url(../Home/Room/Images/bg_txt80_jr.gif) no-repeat;border:solid 1px #94bfdd;}
+
+.input80_24_orange_jr { width:80px; height:24px;background:url(../Home/Room/Images/bg_txt80_orange_jr.gif) no-repeat;border:solid 1px #ff9b27;}
+
+.input228_26_orange_jr { width:228px; height:26px; background:url(../Home/Room/Images/bg_txt228_jr.gif) no-repeat;}
+
+.input228_26_blue_jr { width:228px; height:26px; background:url(../Home/Room/Images/bg_blue_txt228_jr.gif) no-repeat;}
+
+.input226_24_jr, .input188_24_jr, .input80_24_jr{height:24px;line-height:24px;border:#94bfdd 1px solid;text-indent:7px; vertical-align:middle;}
+
+.input228_26_orange_jr, .input228_26_blue_jr{height:26px;line-height:26px;border:none;text-indent:4px;vertical-align:middle;}
+
+/*btn*/
+
+.bluebtn01_jr { width:163px; height:45px; background:url(../Home/Room/Images/bluebtn01_jr.gif) no-repeat;cursor:pointer;}
+
+.bluebtn02_jr { width:243px; height:45px; background:url(../Home/Room/Images/bluebtn02_jr.gif) no-repeat;cursor:pointer;}
+
+.bluebtn03_jr { width:86px; height:33px; background:url(../Home/Room/Images/bluebtn03_jr.gif) no-repeat;cursor:pointer;}
+
+.bluebtn04_jr { width:173px; height:31px; background:url(../Home/Room/Images/bluebtn04_jr.gif) no-repeat;cursor:pointer;}
+
+.orangebtn01_jr { width:214px; height:43px; background:url(../Home/Room/Images/orangebtn01_jr.gif) no-repeat;cursor:pointer;}
+
+.orangebtn02_jr { width:214px; height:43px; background:url(../Home/Room/Images/orangebtn02_jr.gif) no-repeat;cursor:pointer;}
+
+.orangebtn03_jr { width:77px; height:18px; background:url(../Home/Room/Images/orangebtn03_jr.gif) no-repeat;cursor:pointer;}
+
+.orangebtn04_jr { width:214px; height:43px; background:url(../Home/Room/Images/orangebtn04_jr.gif) no-repeat;cursor:pointer;}
+
+.orangebtn05_jr { width:110px; height:35px; background:url(../Home/Room/Images/orangebtn05_jr.gif) no-repeat;cursor:pointer;}
+
+.bluebtn01_jr,.bluebtn02_jr,.bluebtn03_jr,.bluebtn04_jr,.orangebtn01_jr,.orangebtn02_jr,.orangebtn02_jr,.orangebtn03_jr,.orangebtn04_jr,.orangebtn04_jr,.orangebtn05_jr{ border:none; vertical-align:middle;}
+
+/*color*/
+
+em.fcolor_orange_jr { color:#fc4900; font-size:14px; font-style:normal; padding-left:6px; text-align:left; padding-right:9px; }
+
+em.fcolor_orange01_jr { color:#fc4900; font-size:14px; font-style:normal; text-align:left; }
+
+em.fcolor_orange02_jr { color:#fc5d00; font-size:14px; font-style:normal; text-align:left; font-weight:bolder; }
+
+em.fcolor_orange03_jr { color:#fc5d00; font-size:17px; font-style:normal; text-align:left; font-weight:bolder; }
+
+em.fcolor_blue_jr { color:#0066cc; font-size:14px; font-style:normal; text-align:left; font-weight:bolder; }
+
+em.fcolor_gray_jr { color:#626262; font-size:13px; font-style:normal; text-align:left; }
+
+em.fcolor_gray01_jr { color:#5a5a5a; font-size:15px; font-style:normal; text-align:left; font-weight:bolder; }
+
+em.fcolor_green_jr { color:#339900; font-size:14px; font-style:normal; text-align:left; }
+
+em.fcolor_red_jr { color:#e50101; font-size:12px; font-style:normal; text-align:left; }
+
+.fcolor_gray_jr { color:#cfcfcf; }
+
+.fcolor_gray01_jr { color:#a6a6a6; }
+
+.fcolor_gray02_jr { color:#8a8a8a; }
+
+.fcolor_gray03_jr { color:#626262; font-size:14px; }
+
+/*a*/
+
+a{cursor:pointer;}
+
+a.acolor_orange_jr { color:#f45a00;}
+
+a.acolor_gray_jr { color:#7a7a7a;text-decoration:underline;}
+
+a:hover.acolor_gray_jr { color:#f45a00;}
+
+a.login_tip_jr { color:#4180c7;text-decoration:underline;}
+
+a:hover.login_tip_jr { color:#f45a00;}
+
+
+
+/*2011-06-16athena*/
+
+.login_input_jr{padding-top:18px;}
+
+.login_input_jr .orangebtn05_jr{float:left;margin-left:87px;}
+
+.login_border_jr .input188_24_jr{float:left;}
+
+
+
+.reg_content_jr table td.reg_space01_jr{line-height:35px;}
+
+.reg_content_jr table td.reg_space02_jr{line-height:16px;}
+
+.reg_content_jr table td.reg_space03_jr{line-height:9px;}
+
+.reg_content_jr table td.reg_space04_jr{line-height:6px;}
+
+.reg_content_jr table td.reg_space05_jr{line-height:27px;}
+
+
+
+.reg_content_jr .indent_align_jr{float:left;height:24px;}
+
+.indent_align_jr #verifycode{margin-top:4px;}
+
+.bluebtn04_jr{margin-top:11px;}
+
+/*2011-0625 athena add*/
+
+tr.pwdstr_jr td{line-height:20px;}
+
+td.pwdstrength_jr{color:#4e84a9;}
+
+.lblpwdstr_jr{float:left;width:62px;display:inline;text-indent:0;margin-left:7px;}
+
+.pwdstr03_jr{float:left;width:82px;height:7px;border:solid 1px #95c62e;display:inline;margin-top:5px;}
+
+.pwdstr02_jr{float:left;width:80px;height:5px;border:solid 1px #ffffff;display:inline;}
+
+.pwdstr01_jr{float:left;height:5px;background-color:#95c62e;}
+
+tr.line01_jr td{line-height:14px;}
+
+td.imaccount_jr{color:#999999;text-align:right;}
+
+
+
+/*2011-06-15*/
+
+.member{ float:left; height:50px; line-height:50px;border-left:#e0e0e0 1px solid; margin-left:25px; padding-left:15px;}
+
+.member .state{ width:370px;font-family:"黑体";font-size:24px; color:#666;}
+
+.member .telphone{ width:245px;font-family:Verdana;font-size:12px; color:#6b88a7;}
+
+.online{ width:81px; height:23px;background:url(../Home/Room/Images/online.gif) no-repeat; display:block;}
+
+/*注册样式*/
+
+</style>
+    <link rel="stylesheet" title="对于&quot;在浏览器中预览&quot;为禁用: ../Home/Room/Style/zbuy.css" type="text/css" />
+<style type="text/css">
+
+.wrap{ display:block; overflow:hidden;}
+.wrap .left
+{
+    border: 1px solid #ffb9a7;
+    width: 720px;
+    float: left;
+    overflow:hidden;
+}
+.wrap .left .main1
+{
+    margin: 1px 1px 0px 1px;
+    height:120px;
+     background-image:url(../Home/Room/Images/caizhong_bg.gif)
+    
+}
+.wrap .left .main1 img
+{
+    float:left;
+    display:block;
+    margin-left:15px;
+    margin-top:15px;
+    }
+ .wrap .left .main1 dl
+ {
+     float:right;
+     margin-top:25px;
+     width:590px;
+     }
+ .wrap .left .main1 dl dt
+ {
+     line-height:20px;
+     height:20px;
+     }
+ .wrap .left .main1 dl dt a
+ {
+     color:#0048e1;
+     }     
+  .wrap .left .main1 dl dt a
+  {
+      float:right;
+      margin-right:30px;
+      }        
+.wrap .left .main1 dl h1
+{
+    float: left;
+  font-family: DFKai-SB;
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+}
+.wrap .left .main1 dl h1 span
+{
+    color: #df2008;
+    font-family: DFKai-SB;
+}
+.wrap .left .main1 dl dd
+{
+    margin-top:20px;
+    }
+.wrap .left .main1 dl dd em
+{
+    color: #df2008;
+    font-weight: bold;
+    margin-left:5px;
+    margin-right:5px;
+}               
+
+
+#con {
+	FONT-SIZE: 12px; MARGIN: 0px auto; WIDTH: 720px
+}
+#tags {
+	 WIDTH: 620px; HEIGHT: 28px;
+	 padding-left:100px;
+	 margin-bottom:0px;
+}    
+
+#tags LI
+{
+    background: url('../Home/Room/Images/tag_bg.gif') no-repeat left bottom;
+    float: left;
+    margin-right: 1px;
+    list-style-type: none;
+    height: 28px;
+    width:112px;
+}
+#tags LI A
+{
+    width: 112px;
+    display: block;
+    text-align: center;
+    float: left;
+    padding-bottom: 0px;
+    color: #a33200;
+    line-height: 28px;
+    padding-top: 0px;
+    height: 28px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#tags LI.emptyTag {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 4px
+}
+#tags LI.selectTag {
+	BACKGROUND-POSITION: left top; MARGIN-BOTTOM: -2px; POSITION: relative; HEIGHT: 28px
+}
+#tags LI.selectTag A
+{
+    background-position: right top;
+    color: #FFFFFF;
+    line-height: 28px;
+    height: 28px;
+}
+#tagContent
+{
+    border-right: #aecbd4 1px solid;
+    padding-right: 1px;
+    border-top: #aecbd4 1px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #aecbd4 1px solid;
+    padding-top: 1px;
+    border-bottom: #aecbd4 1px solid;
+    background-color: #fff;
+    border-style: solid none none none;
+    border-width: 5px 0px 0px 0px;
+    border-color: #d02902;
+}
+.tagContent {
+ DISPLAY: none;  PADDING-BOTTOM: 10px; WIDTH: 720px; COLOR: #474747; PADDING-TOP: 10px; overflow:hidden;
+}
+#tagContent DIV.selectTag {
+	DISPLAY: block
+}
+#tagContent iframe
+{
+    border-style: none;
+    border-width: 0px;
+    width: 680px;
+    overflow:hidden;
+    margin-top: 10px;
+    margin-left: 19px;
+    padding:0px;
+    *scrolling="no";
+     
+}
+.tag_input
+{
+    background-image: url('../Home/Room/Images/tab_input_bg.gif');
+    background-repeat: repeat-x;
+    height:30px;
+    width:658px;
+    padding-left:60px;
+    line-height:20px;
+    padding-top:5px;
+}
+.tag_input input
+{
+    margin-left:20px;
+   *margin-left:10px;
+   margin-top:4px;
+   *margin-top:1px;
+   *+margin-top:-1px;
+   display:block;
+    float:left;
+    line-height:20px;
+    }
+.tag_input span
+    {
+    height:20px;
+    display:block;
+    float:left;
+    line-height:20px;
+}
+    .tag_input h1
+    {
+    display:block;
+    float:left;
+    height: 20px;
+    font-weight:bold;
+    margin-left:30px;
+        }
+   .tag_input label select
+   {
+       float:left;
+       margin-left:10px;
+        border: 1px solid #808080;
+       }
+    .tag_input label
+    {
+        float:left;
+        margin-left:10px;
+        }
+  .tag_input label h1
+  {
+      color:#ce2100;
+      }
+  .tag_input label input
+{
+    border: 1px solid #808080;
+    margin: 0px;
+    padding: 0px;
+    height: 20px;
+    *margin-top:-2px;
+    text-indent:3px;
+}
+  .tag_input label .sousuo
+  { 
+      border:0px;
+      width:50px;
+      display:block;
+      height:23px; 
+      *height:23px; 
+      text-indent:-9999px;
+      background-image: url('../Home/Room/Images/button_chaxun.jpg'); background-repeat: no-repeat; }
+    .tag_input label  a
+    {
+        margin-right:10px;
+        }    
+                 
+
+
+.main3 .lot_data
+{
+    background-position: center bottom;
+    margin-top: 10px;
+    padding-left:50px;
+    height: 50px;
+    color: #333;
+    background-image: url('../Home/Room/Images/tag_shu_bg.gif');
+    background-repeat: no-repeat;
+}
+
+.zh-op
+{
+    border-style: solid;
+    border-color: #fad1b4;
+    height: 25px;
+    padding-top: 5px;
+    border-width: 1px 0 0px 0;
+    line-height: 25px;
+    overflow: hidden;
+    background-color: #fefbf8;
+}
+
+.zh-op .title{ float:left;width:110px; background-repeat:no-repeat; border:none; text-align:center;}
+
+.zh-op label{font-weight:bold;color:#f00; margin-right:30px;}
+.zh-op label input{ margin-top:-3px; margin-right:3px; *margin-top:0px;}
+
+.zh-op span.sort{ padding:0 0 0 14px;}
+
+.zh-select{overflow:hidden;zoom:1;}
+
+.zh-select a
+{
+    border-style: solid solid none solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: #FFE1E1;
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+    background: #fffefc;
+    color: #a33200;
+}
+
+.zh-select a.cur, .zh-select a:hover
+{
+    border-color: #FFE1E1;
+    background: #d41f00;
+    text-decoration: none;
+    color: #fff;
+}
+
+#zh-list
+{
+    width: 600px;
+    border: 1px solid #FFE1E1;
+    overflow: hidden;
+}
+
+#zh-list .hd
+{
+    height: 26px;
+    padding: 4px 10px 0;
+    background-color: #F5F5F5;
+}
+
+#zh-list .hd span{display:inline-block;}
+
+#zh-list .hd .zh-col-1{width:80px;}
+
+#zh-list .hd .zh-col-2{width:204px;}
+
+#zh-list .hd .zh-col-3{width:125px;}
+
+#zh-list .hd .zh-col-4{width:100px;}
+
+#zh-list .bd{height:140px;overflow-x:hidden; overflow-y:scroll;}
+
+#zh-list .zj_table td{border-bottom:0;line-height:26px;text-align:left;}
+
+#zh-list .zj_table td.xh{padding-left:10px;}
+.buy_sort{background:#f6fbff; border:1px solid #B7D5F7; border-width:1px 0;height:25px; padding-top:10px; overflow:hidden;}
+
+.buy_sort span.title{float:left; text-align:center; width:90px;}
+
+.buy_sort span.sort{float:left;padding:0 0 0 14px; }
+
+.buy_sort span.sort input{height:14px\9;vertical-align:-1px;vertical-align:-3px\9;*vertical-align:1px; cursor:pointer;}
+
+.buy_sort span.add_info{float:right; height:16px;padding-right:16px; text-align:right;color:#999;background-position:right -64px;overflow:hidden;}
+
+.buy_sort label{cursor:pointer;}
+
+.buy_table tr.last_tr td{border-bottom:0;}
+
+.buy_table td{border-bottom:1px solid #e0e2e1;}
+.td_title{ background-color: #fefbf8; padding:5px 0; text-align:center; width:90px; vertical-align:middle;}
+
+.td_content{background:#fff; padding:5px 20px 5px 8px; text-align:left; vertical-align:middle;}
+
+.td_content p{line-height:28px;}
+
+.td_content p.m_b10{margin-bottom:10px;}
+.btn_buy
+{
+    background-image: url('../Home/Room/Images/tag_ljtz.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:33px;
+    width:130px;
+    display:block;
+text-indent: -9999px;
+border:0px;
+}
+
+em, i, s {
+font-style: normal;
+}
+.r {
+float: right;
+}
+.gray, .gray a, a.gray {
+color: #999;
+}
+.wrap .right
+{
+    width:255px;
+    float:right; 
+    overflow:hidden;
+    }
+.rmain1
+{
+    border: 1px solid #CCCCCC;
+    overflow:hidden;
+}
+.rmain1 .title
+{
+	line-height: 28px;
+	padding-left: 5px;
+	padding-right: 5px; /*background-image: url('../Images/rmain_title_bg.gif');*/
+	background-repeat: repeat-x;
+	height: 28px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+	background-color: #F6F6F6;
+}
+.rmain1 .title  h1{ float:left; font-size:12px; font-weight:bold; }
+.rmain1 .title h2
+{float:left; font-size:12px; font-weight:bold; 
+/*    background-position: left center;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    background-image: url('../Images/rmain_bg.gif');
+    background-repeat: no-repeat;
+    padding-left:20px;*/
+}
+.rmain1 .title a{ float:right; color:Black;}
+.rmain1 p
+{
+    display:block;
+    padding-top:7px;
+   padding-left:30px;
+    }
+ .rmain1 p span
+ {
+     color:Red;
+     }
+ .rmain1 .xian
+{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+}       
+.rmain1 .qiu
+{
+    text-align:center;
+    padding-left:0px;
+    }
+.rmain1 .qiu span
+{
+    background-image: url('../Home/Room/Images/zfb_redball.gif');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    margin-left: 3px;
+    display: inline-block;
+    font-family: "tahoma";
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height:23px;
+     *line-height:22px;
+}
+.rmain1 .neirong .table1
+{
+    width: 240px;
+    margin: 10px auto 0px auto;
+    line-height:22px;
+}
+.rmain1 .neirong .table1 tr
+{ 
+ 
+    }
+.rmain1 .neirong .table1 tr td
+{
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    overflow: hidden;
+}
+.backer-block2
+{
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    width: 240px;
+    margin: 8px auto 8px auto;
+} 
+.rmain1 .td1
+{
+    font-weight: bold;
+    background-color: #F3F3F3;
+    color: #666666;
+}
+.backer-block2 tr {
+overflow:hidden;
+}
+.backer-block2 tr td
+{
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    overflow: hidden;
+}
+.imgs
+{
+    margin-top:10px;
+    margin-bottom:10px;
+    }    
+.imgs img
+{
+    width:255px;
+    }
+.rmain1 .neirong ul
+{
+     margin-bottom:10px;
+    overflow:hidden;
+    display:block;
+   
+    
+    }
+ .rmain1 .neirong ul li
+{
+    margin-top: 7px;
+    padding-left: 10px;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+ .rmain1 .neirong ul li a
+{
+    color: #333333;
+}           
+
+
+/*福彩3D*/
+.ssq_jx{ margin:opx auto; width:240px; margin-bottom:7px;}
+
+            .ssq_jx th,.ssq_jx td{border:1px solid #e1e1e1; text-align:center;}
+            .ssq_jx th{ background:#f0f0f0}
+            .ssq_jx td{  background:#fafafa;}
+/*七乐彩*/
+#lanqiu span{background-image: url('../Home/Room/Images/zfb_blueball.gif');}
+/*双色球*/
+
+.lanqiu{ background-image: url('../Home/Room/Images/zfb_blueball.gif');}
+ #ssq .xian{ margin-right: 10px;margin-left: 10px;padding-bottom: 7px;padding-left: 0px;}  
+#ssq p{display:block;padding-top:7px;padding-left:10px; }    
+#ssq .qiu span{ margin-left: 0px;}
+
+/*22选5*/
+
+
+/*时时彩*/
+#Con
+{
+    padding:0px;
+    margin:0px;
+    display:block;
+ overflow:hidden;
+ width:718px;
+ height:300px;
+    }
+#Cons {
+HEIGHT: 30px;
+padding-left:100px;
+}
+#Cons LI
+{
+    background: url('../Home/Room/Images/ssC_bg.gif') no-repeat -100px bottom;
+    float: left;
+    margin-right: 1px;
+    list-style-type: none;
+    height: 30px;
+    width: 60px;
+}
+#Cons LI A
+{
+    width: 60px;
+    display: block;
+    text-align: center;
+    float: left;
+    padding-bottom: 0px;
+    color: #333333;
+    line-height: 28px;
+    padding-top: 0px;
+    height: 28px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#Cons  LI.emptyCon {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 4px
+}
+#Cons  LI.selectCon {
+	BACKGROUND-POSITION: left top; MARGIN-BOTTOM: -2px; POSITION: relative; HEIGHT: 28px
+}
+#Cons LI.selectCon A
+{
+    background-position: right top;
+    color: #A33200;
+    line-height: 28px;
+    height: 28px;
+}
+#ConContent
+{
+    
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    background-color: #fff;    
+}
+.ConContent {
+ DISPLAY: none;  PADDING-BOTTOM: 3px; WIDTH: 718px; COLOR: #474747; padding-top:3px; overflow:hidden;
+}
+#ConContent DIV.selectCon { overflow:hidden;
+	DISPLAY: block
+}
+#ConContent .tag_input
+{
+    height:22px;
+    
+    }
+#ConContent
+{
+    margin-top:0px;
+    }
+.youxiang tr td
+{
+    line-height:30px;
+    padding-left:10px;
+    }
+.hemai{ width:718px;}
+.hemai thead tr td
+{
+    height: 36px;
+    background-image: url('../Home/Room/Images/hemai_head_bg.jpg');
+    background-repeat: repeat-x;
+    line-height:36px;
+}
+.hemai thead tr td
+{
+    font-weight: bold;
+    border-top-style: none;
+}
+.hemai tr td
+{
+    border: 1px solid #CCCCCC;
+     text-align:center;
+     line-height:30px;
+
+}    
+.hemai .bg
+{
+    background-color: #f7f2f2;
+}
+
+    
+    
+
+</style>
+
+    <script src="../JavaScript/jquery-1.4.js" type="text/javascript"></script>
+
+    <script src="../Home/Room/JavaScript/Public.js" type="text/javascript"></script>
+
+    <script src="../Home/Room/JavaScript/BuySFC.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <uc1:Head ID="Head1" runat="server" />
+    <input id="tbPlayTypeID" name="tbPlayTypeID" type="hidden" />
+    <asp:HiddenField ID="HidIsuseEndTime" runat="server" />
+    <asp:HiddenField ID="HidIsuseID" runat="server" />    
+                <div style="margin:0 auto; margin-bottom:10px; width:986px;">
+             <a href="BuyCQSSC.aspx"> <img src="../Images/ads8.jpg" /></a> </div>
+    <div class="wrap">
+        <div class="left">
+            <div class="main1">
+                <img alt="" src="../Home/Room/Images/logo_1.gif" />
+                <dl>
+                    <dt>
+                        <h1>
+                            <span>14场胜负彩</span>：两元赢取<span>￥800万</span></h1>
+                        <a href="../Help/play12.aspx">玩法介绍</a><a href="../WinQuery/Default.aspx">中奖查询</a></dt>
+                    <dd>
+                        不定期开奖 <em>第<span id="currIsuseName"></span>期</em><br/>
+                        投注截止:<span id="currIsuseEndTime"></span>
+                        离投注截止还有:<em id="toCurrIsuseEndTime"></em></dd>
+                </dl>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="main2">
+                <div id="con">
+                    <ul id="tags">
+                        <li id="tag0" class="selectTag"><a id="TabMenu" onclick="newBuy()" href="javascript:void(0)">
+                            选号投注</a></li>
+                        <li id="tag1"><a onclick="newCoBuy(<%=LotteryID %>)" href="javascript:void(0)">参与合买</a></li>
+                        <li id="tag2"><a onclick="followScheme(<%=LotteryID %>)" href="javascript:void(0)">定制跟单</a></li>
+                        <li id="tag3"><a onclick="schemeAll(<%=LotteryID %>)" href="javascript:void(0)">全部方案</a></li>
+                    </ul>
+                    <div id="tagContent">
+                        <div id="tagContent0" style="height: 680px">
+                            <div class="tag_input">
+                                <input type='radio' name='playType' id='playType101' value='7401' checked='checked'
+                                    onclick='clickPlayType(this.value)' /><span>单式</span>
+                                <input type='radio' name='playType' id='playType102' value='7402' onclick='clickPlayType(this.value)' /><span>复式</span>
+                                <input type='radio' name='playType' id='playType1011' value='74011' onclick='clickPlayType(this.value)'
+                                    style="display: none" /><span style="display: none">单式预投</span>
+                                <input type='radio' name='playType' id='playType1022' value='74022' onclick='clickPlayType(this.value)'
+                                    style="display: none" /><span style="display: none">复式预投</span>
+                            </div>
+                            <iframe id="iframe_playtypes" name="iframe_playtypes" width="100%" frameborder="0"
+                                height="100%" scrolling="no" onload="document.getElementById('iframe_playtypes').style.height=iframe_playtypes.document.body.scrollHeight;">
+                            </iframe>
+                        </div>
+                        <div id="tagContent1" style="display: none;" >
+                            <iframe id="iframeCoBuy" name="iframeCoBuy" width="100%" frameborder="0" scrolling="no"
+                                onload="document.getElementById('iframeCoBuy').style.height=iframeCoBuy.document.body.scrollHeight;">
+                            </iframe>
+                        </div>
+                        <div id="tagContent2" style="display: none">
+                            <iframe id="iframeFollowScheme" name="iframeFollowScheme" width="100%" frameborder="0"
+                                scrolling="no" onload="document.getElementById('iframeFollowScheme').style.height=iframeFollowScheme.document.body.scrollHeight;">
+                            </iframe>
+                        </div>
+                        <div id="tagContent3" style="display: none">
+                            <iframe id="iframeSchemeAll" name="iframeSchemeAll" width="100%" frameborder="0"
+                                scrolling="no" onload="document.getElementById('iframeSchemeAll').style.height=iframeSchemeAll.document.body.scrollHeight;">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="main3" id="tagContent4">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="right">
+                                <select class="txtarea" size="7" id="list_LotteryNumber" style="width: 580px; height: 147px;"
+                                    multiple="multiple">
+                                </select>
+                            </td>
+                            <td width="120px">
+                                <ul id="touzhu_btns">
+                                    <li>
+                                        <input type="button" id="btn_2_Rand" onclick="if(this.disabled){this.style.cursor='';return false;}return iframe_playtypes.btn_2_RandClick();"
+                                            class="random_btn" value="随机1注" /></li>
+                                    <li>
+                                        <input type="button" id="btn_2_Rand5" onclick="if(this.disabled){this.style.cursor='';return false;}return iframe_playtypes.btn_2_RandManyClick(5);"
+                                            class="random_btn" value="随机5注" />
+                                    </li>
+                                    <li>
+                                        <input id="random5" name="btnPaste" type="button" value="粘贴上传" onclick="CreateUplaodDialog();"
+                                            class="random_btn" /></li>
+                                    <li>
+                                        <input type="button" id="btn_ClearSelect" onclick="return btn_ClearSelectClick();"
+                                            class="del_btn" value="删除所选" /></li>
+                                    <li>
+                                        <input type="button" id="btn_Clear" onclick="return btn_ClearClick();" class="del_btn"
+                                            value="删除全部" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="main3" id="tagContent5">
+                <div class="lot_data">
+                    <input id="CoBuy" name="CoBuy" type="checkbox" onclick="oncbInitiateTypeClick();"
+                        value="2">
+                    <label for="do_syndicate" class="red for_checkbox">
+                        发起合买</label>
+                    <span id="multiple_box">倍投：
+                        <input type="text" class="i-a" onkeypress="return InputMask_Number();" id="tb_Multiple"
+                            name="tb_Multiple" onblur="CheckMultiple();" value="1" maxlength="2" style="ime-mode: disabled;" />
+                        倍{最大99倍}&nbsp;&nbsp;&nbsp;&nbsp;</span> 注数：<span class="red" id="lab_Num">0</span>注&nbsp;&nbsp;&nbsp;&nbsp;<span
+                            id="total_amount_box" class="amount_box"> 金额：<span class="red">2</span>元</span><span
+                                class="amount_box"> 方案金额：<span class="red" id="lab_SumMoney">0</span>元</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="mian4" id="trShowJion" style="display: none;">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0" class="buy_table">
+                    <tbody>
+                        <tr class="td_title" id="trSchemeMoney" style="display: none;">
+                            <td>
+                                方案金额
+                            </td>
+                            <td class="td_content">
+                                <input type="text" onkeypress="return InputMask_Number();" id="tb_SchemeMoney" name="tb_SchemeMoney"
+                                    onblur="return checkSchemeMoney(this);" style="width: 56px;" value="2" />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;只能是2的倍数。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                佣金比率
+                            </td>
+                            <td class="td_content">
+                                <p>
+                                    <input class="i-a" type="text" value="0" onkeypress="return InputMask_Number();"
+                                        id="tb_SchemeBonusScale" name="tb_SchemeBonusScale" onblur="return SchemeBonusScale();" />%
+                                    佣金比例只能为0~10。
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                我要分成
+                            </td>
+                            <td class="td_content">
+                                <p>
+                                    <input class="i-a" type="text" runat="server" id="tb_Share" name="tb_Share" onkeypress="return InputMask_Number();"
+                                        onblur="return CheckShare();" value="1" />份，每份 <span id="lab_ShareMoney" style="color: Red">
+                                            0.00</span>&nbsp;元。&nbsp;&nbsp; <font color="#ff0000">【注】</font>份数不能为空，且能整除总金额。
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                我要认购
+                            </td>
+                            <td class="td_content">
+                                <p>
+                                    <input class="i-a" type="text" runat="server" name="tb_BuyShare" onkeypress="return InputMask_Number();"
+                                        id="tb_BuyShare" onblur="return CheckBuyShare();" value="1" />份，金额 <span id="lab_BuyMoney"
+                                            style="color: Red">0.00</span>&nbsp;元。
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                我要保底
+                            </td>
+                            <td class="td_content">
+                                <p>
+                                    <input class="i-a" type="text" value="0" onkeypress="return InputMask_Number();"
+                                        id="tb_AssureShare" onblur="return CheckAssureShare();" value="0" />份，保底 <span id="lab_AssureMoney"
+                                            style="color: Red">0.00</span>元。 【注】保底资金将被暂时冻结,在当期截止销售时、或根据此方案的销售、撤单情况,冻结资金将返还到您的电话投注卡账户中。
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                招股对象
+                            </td>
+                            <td class="td_content">
+                                <p>
+                                    <input class="i-c" type="text" id="tb_OpenUserList" /></p>
+                                <p>
+                                    【注】您可以选择一些用户作为招股对象，用户名之间用 , 隔开。 如：louis,中个500万,胜负彩高手,...填写错误的用户名、格式不正确、或者没有填写则表示向全部会员招股。
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                方案标题
+                            </td>
+                            <td class="td_content">
+                                <p>
+                                    <input class="i-c" type="text" value="0" id="tb_Title" /></p>
+                                <p>
+                                    【注】标题不能为空,长度不能超过 50 个字符。
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">
+                                方案描述
+                            </td>
+                            <td class="td_content">
+                                <textarea class="i-d" cols="20" rows="2" id="tb_Description"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mian4" id="tagContent6">
+                <table style="height: 90px;">
+                    <tr>
+                        <td height="30" class="td_title">
+                            方案保密
+                        </td>
+                        <td valign="middle" style="padding-left: 5px;" class="td_content" colspan="2">
+                            <input type="radio" name="SecrecyLevel" id="SecrecyLevel0" value="0" checked="checked" />
+                            <span>不保密</span>
+                            <input type="radio" name="SecrecyLevel" id="SecrecyLevel1" value="1" />
+                            <span>保密到截止</span>
+                            <input type="radio" name="SecrecyLevel" id="SecrecyLevel2" value="2" />
+                            <span>保密到开奖</span>
+                            <input type="radio" name="SecrecyLevel" id="SecrecyLevel3" value="3" />
+                            <span>永久保密</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_title">
+                            确认购买
+                        </td>
+                        <td class="td_content">
+                            <ShoveWebUI:ShoveConfirmButton ID="btn_OK" runat="server" BorderStyle="None" class="btn_buy"
+                                OnClientClick="return CreateLogin('btn_OKClick();');" OnClick="btn_OK_Click" />
+                        </td>
+                        <td class="td_content">
+                            <asp:CheckBox ID="chkAgrrement" runat="server" Checked="true" />
+                            我已经阅读并同意
+                            <asp:HyperLink runat="server" ID="hlAgreement" Target="_blank">《用户投注协议》</asp:HyperLink>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="right">
+            <div class="rmain1">
+                <div class="title">
+                    <h2>
+                        胜负彩开奖公告</h2>
+                    <a href="../WinQuery/Default.aspx">更多</a></div>
+                <div id="ssq">
+                    <p class="xian" style="margin-top: 2px;">
+                        第<span id="lastIsuseInfo"></span> 期
+                    </p>
+                    <p>
+                        开奖号码</p>
+                    <p class="qiu" id="LastWinNumber">
+                    </p>
+                    <p>
+                    </p>
+                </div>
+                <div class="neirong">
+                    <table class="table1">
+                        <tr class="td1">
+                            <td>
+                                用户名
+                            </td>
+                            <td>
+                                单注奖金
+                            </td>
+                            <td>
+                                我要跟单
+                            </td>
+                        </tr>
+                        <asp:Repeater ID="RepWin" runat="server">
+                            <ItemTemplate>
+                                <tr>
+                                    <td>
+                                        <MM:BeginLock translatorClass="MM_ASPNETSCRIPT" type="DynamicData" depFiles="" orig="%3C%25%23Eval(%22InitiateName%22)%25%3E" ><MM_DYNAMIC_CONTENT SOURCE="Eval(%22InitiateName%22)" DYNAMICDATA=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{text}</MM:DECORATION></MM_DYNAMIC_CONTENT><MM:EndLock>
+                                    </td>
+                                    <td>
+                                        <span class="red">
+                                            <MM:BeginLock translatorClass="MM_ASPNETSCRIPT" type="DynamicData" depFiles="" orig="%3C%25%23Eval(%22Win%22)%25%3E" ><MM_DYNAMIC_CONTENT SOURCE="Eval(%22Win%22)" DYNAMICDATA=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{text}</MM:DECORATION></MM_DYNAMIC_CONTENT><MM:EndLock></span>
+                                    </td>
+                                    <td>
+                                        <a href="../Home/Room/FollowSchemeHistory.aspx">定制</a>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                            <AlternatingItemTemplate>
+                                <tr style="background-color: #f7f7f7">
+                                    <td>
+                                        <MM:BeginLock translatorClass="MM_ASPNETSCRIPT" type="DynamicData" depFiles="" orig="%3C%25%23Eval(%22InitiateName%22)%25%3E" ><MM_DYNAMIC_CONTENT SOURCE="Eval(%22InitiateName%22)" DYNAMICDATA=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{text}</MM:DECORATION></MM_DYNAMIC_CONTENT><MM:EndLock>
+                                    </td>
+                                    <td>
+                                        <span class="red">
+                                            <MM:BeginLock translatorClass="MM_ASPNETSCRIPT" type="DynamicData" depFiles="" orig="%3C%25%23Eval(%22Win%22)%25%3E" ><MM_DYNAMIC_CONTENT SOURCE="Eval(%22Win%22)" DYNAMICDATA=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{text}</MM:DECORATION></MM_DYNAMIC_CONTENT><MM:EndLock></span>
+                                    </td>
+                                    <td>
+                                        <a href="#">定制</a>
+                                    </td>
+                                </tr>
+                            </AlternatingItemTemplate>
+                        </asp:Repeater>
+                    </table>
+                </div>
+                <div class="neirong">
+                    <table class="backer-block2">
+                        <tbody>
+                            <tr class="td1">
+                                <td>
+                                    期次
+                                </td>
+                                <td>
+                                    开奖号码
+                                </td>
+                            </tr>
+                            <MM:BeginLock translatorClass="MM_ASPNETSCRIPT" type="DynamicData2" depFiles="" orig="%3C%25=RepWinNumber%25%3E" ><MM_DYNAMIC_CONTENT SOURCE="RepWinNumber" DYNAMICDATA=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{text}</MM:DECORATION></MM_DYNAMIC_CONTENT><MM:EndLock>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="imgs">
+                <img src="../Home/Room/Images/gg1.jpg" />
+            </div>
+            <div class="rmain1">
+                <div class="title">
+                    <h1>
+                        胜负彩新闻</h1>
+                    <a href="../SiteNews/NewList.aspx?TypeId=101004">更多</a></div>
+                <div class="neirong">
+                    <ul>
+                        <asp:Repeater ID="RepNewt" runat="server">
+                            <ItemTemplate>
+                                <li><a href="../SiteNews/NewDetail.aspx?id=<%#Eval("ID")%>">
+                                    <MM:BeginLock translatorClass="MM_ASPNETSCRIPT" type="DynamicData" depFiles="" orig="%3C%25%23Shove._String.Cut(Eval(%22Title%22).ToString(),17)%25%3E" ><MM_DYNAMIC_CONTENT SOURCE="Shove._String.Cut(Eval(%22Title%22).ToString(),17)" DYNAMICDATA=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{text}</MM:DECORATION></MM_DYNAMIC_CONTENT><MM:EndLock></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <uc2:WebFoot ID="WebFoot2" runat="server" />
+    <input id="tb_LotteryNumber" name="tb_LotteryNumber" type="hidden" />
+    <input id="tb_hide_SumMoney" name="tb_hide_SumMoney" type="hidden" />
+    <input id="tb_hide_AssureMoney" name="tb_hide_AssureMoney" type="hidden" />
+    <input id="tb_hide_SumNum" name="tb_hide_SumNum" type="hidden" />
+    <input id="HidMaxTimes" name="HidMaxTimes" type="hidden" value="1000" />
+    <input id="HidLotteryID" name="HidLotteryID" type="hidden" value="{text}" />
+    <input id="tbAddone" name="tbAddone" type="hidden" runat="server" />
+    <input id="tbPlayTypeName" name="tbPlayTypeName" type="hidden" value="单式" />
+    <input id="HidSelectedLotteryNumber" name="HidSelectedLotteryNumber" type="hidden" />
+    <asp:HiddenField ID="HidType" runat="server" Value="1" />
+    <asp:HiddenField ID="HidLuckNumber" runat="server" />
+
+    <script type="text/javascript">
+
+        setTimeout("Page_load(<%= LotteryID %>, <%= Number %>);", 500);
+      <%=DZ %>
+    </script>
+
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+   var notIE = -[1,];
+         if(-[1,]){ 
+           alert('尊敬的用户您好，由于您当前使用浏览器不支持网银操作，为了更好地体验购彩服务，请使用以IE为核心的浏览器(例如:IE7.0以上浏览器、360浏览器、傲游浏览器、TT浏览器，TheWorld、Avant Browser 、GreenBrowser.)');
+         }
+</script>

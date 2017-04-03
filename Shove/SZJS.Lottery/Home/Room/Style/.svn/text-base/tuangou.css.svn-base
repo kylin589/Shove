@@ -1,0 +1,157 @@
+﻿.wrap{ background-color:#c30303; padding-bottom:5px;}
+.tuangou
+{
+	background-position: top;
+	float: left;
+	margin-left: 5px;
+	border: solid 1px #fb7d28;
+	width: 973px;
+	background-color: #ffffff;
+	background-image: url('../../../tuan/images/cen_shu_bg.jpg');
+	background-repeat: repeat-x;
+	
+}
+.tuangou .yuan
+{
+	background-image: url('../../../tuan/images/yuan_top.jpg');
+	background-repeat: no-repeat;
+	background-position: left top; height:48px; width:964px; margin:0 auto; margin-top:5px;
+	padding-top:50px;
+	 overflow:hidden;
+}
+.tuangou .yuancen
+{
+	background-image: url('../../../tuan/images/yuancen.jpg');
+	background-repeat: repeat-y;
+	width: 964px;
+	margin: 0 auto;
+	text-align:center;
+	padding-top:30px;
+	 overflow:hidden;
+}
+.tuangou .yuancen span{ margin:5px; font-size:14px;}
+.tuangou .yuancen .text{ height:22px; width:150px;}
+.tuangou .yuancen .cen{ width:360px; text-align:left; line-height:35px; padding-top:10px; color:#6c6c6c ; display:block; margin:0 auto;}
+.tuangou .yuancen .btn{ width:93px; height:24px; display:inline-block; text-indent:-9999px;background-image: url('../../../tuan/images/btn.jpg'); border:0px;}
+.tuangou .yuancen .botm
+{
+	background-image: url('../../../tuan/images/bot_bg.jpg');
+	background-repeat: no-repeat;
+	width:744px; height:144px;
+	text-align:left;
+	line-height:25px;
+	padding:8px;
+	padding-left:20px;
+	color:#6c6c6c;
+	margin:0 auto;
+}
+.tuangou .yuancen .botm span{ color:#bb1801; font-size:12px; font-weight:bold;}
+.tuangou .yuanbottom
+{
+	background-image: url('../../../tuan/images/yuan_bottom.jpg');
+	background-repeat: no-repeat;
+	background-position: left top;
+	height:9px; font-size:9px; width:964px; margin:0 auto; display:block; margin-bottom:5px;
+}
+.tuangou .zhongjian{ text-align:center; font-size:14px; font-weight:bold; color:#9d1714}
+.tuangou .lie{  margin-top:5px; text-align:left;}
+.tuangou .lie span{ width:400px; display:inline-block; text-align:right;}
+.tuangou .lie input{ width:150px; height:22px; border:solid 1px #4c4c4c}
+.tuangou .lie em{ padding-left:10px; color:Red;}
+.tuangou .lie img{ margin-left:5px; height:22px;}
+.tuangou .lie .button
+{
+	background-position: left top;
+	width: 116px;
+	height: 29px;
+	border: 0px;
+	background-image: url('../../../tuan/images/tijiao.jpg');
+	background-repeat: no-repeat;
+	text-indent:-9999px;
+ margin-top:30px; 
+ margin-bottom:20px;
+ display:block;
+ overflow:hidden;
+ margin:0 auto;
+}
+.tuangou .lie a{ font-size:14px; font-weight:bold; color:Red}
+.tuangou .lie .jihuo
+{
+	background-position: left top;
+	width: 150px;
+	height: 29px;
+	border: 0px;
+	background-image: url('../../../tuan/images/jihuo.jpg');
+	background-repeat: no-repeat;
+	text-indent:-9999px;
+ margin-top:30px; 
+ margin-bottom:20px;
+ display:block;
+ overflow:hidden;
+  margin:0 auto;
+}
+
+.fooder
+{
+	background-image: url('../../../tuan/images/titi_bg.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 740px;
+	margin: 0 auto;
+}
+.fooder h1{ line-height:32px; font-size:14px; font-weight:bold; color:White; width:185px; text-align:center;  display:inline-block; float:left;margin-right:40px;}
+.fooder span{ line-height:32px;  font-size:12px; font-weight:bold; text-align:center;  display:inline-block; height:32px;float:left; color:#757575;margin-right:40px;}
+.fooder em
+{
+    background-position: center center;
+    width: 12px;
+    height: 32px;
+    display: inline-block;
+    background-image: url('../../../CPS/images/jiantou.jpg');
+    background-repeat: no-repeat;float:left;  margin-right:40px;
+}
+#con
+{
+    font-size: 12px;
+    margin: 0px auto;
+    display:block;
+    width:740px;
+}
+#tagContent
+{
+    border-right: #aecbd4 1px solid;
+    padding-right: 1px;
+    border-top: #aecbd4 1px solid;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    border-left: #aecbd4 1px solid;
+    border-bottom: #aecbd4 1px solid;
+    background-color: #fff;
+    border-color: #dfdfdf;
+}
+.tagContent
+{
+    padding-right: 10px;
+    display:block;
+    padding-left: 10px;
+    background: url(../Images/con_a_bg3.jpg) repeat-x;
+    padding-bottom: 10px;
+    color: #474747;
+    padding-top: 10px;
+    overflow: hidden;
+    padding-right: 10px;
+    display:block;
+}
+.input_txt
+{
+	border: 1px solid #999999; height:20px; line-height:20px; width:60px;
+}
+#con .p1{ display:block; line-height:50px; text-align:left; text-indent:10px; font-weight:bold; }
+#con .p1 em{ color:Red; }
+#con table tr td{ text-align:left;}
+#con table tr td label{ width:15px; display:block; height:27px; line-height:27px;}
+#con table tr td label input{ height:27px; }
+.red12{ color:Red; vertical-align:bottom; line-height:10px; padding-top:10px;}
+.table2 tr td{ line-height:14px;}
+.table2 tr td span{ line-height:14px;}

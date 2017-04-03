@@ -1,0 +1,370 @@
+﻿A
+{
+	color: #585858;
+	text-decoration: none;
+}
+A:visited
+{
+	color: #585858;
+	text-decoration: none;
+}
+A:hover
+{
+	color: #FB7C00;
+	text-decoration: underline;
+}
+
+A.tr:link
+{
+	color: #585858;
+	text-decoration: none;
+}
+A.tr:visited
+{
+	color: #585858;
+	text-decoration: none;
+}
+A.tr:hover
+{
+	color: #585858;
+	text-decoration: underline;
+}
+
+BODY
+{
+	scrollbar-face-color: #CECBCE;
+	scrollbar-highlight-color: WHITE;
+	scrollbar-shadow-color: #848284;
+	scrollbar-3dlight-color: #848284;
+	scrollbar-arrow-color: WHITE;
+	scrollbar-track-color: #EAEAEA;
+	scrollbar-darkshadow-color: WHITE;
+	font-family: "宋体";
+	color: #3C3C3C;
+	font-size: 9pt;
+	line-height: 14pt;
+	margin: 0px;
+}
+P
+{
+	color: black;
+	font-family: "宋体";
+	font-size: 9pt;
+	line-height: 14pt;
+}
+TD
+{
+	font-family: "宋体";
+	font-size: 9pt;
+	line-height: 14pt;
+}
+IMG
+{
+	border: 0;
+}
+
+input
+{
+	font-size: 9pt;
+	font-family: 宋体;
+}
+select
+{
+	font-size: 9pt;
+	font-family: 宋体;
+}
+textarea
+{
+	font-size: 9pt;
+	font-family: 宋体;
+}
+
+.input
+{
+	border: #838383 1px solid;
+	background-color: white;
+}
+.button
+{
+	border: #838383 1px solid;
+	background-color: #A51818;
+	color: white;
+	font-weight: bold;
+}
+.button1
+{
+	border: #838383 1px solid;
+	background-color: #4957C2;
+	color: white;
+	font-weight: bold;
+}
+.button2
+{
+	border: #B2B2B2 1px solid;
+	background-color: #E0E0E0;
+	color: #A51818;
+}
+.bk
+{
+	position: relative;
+	left: 4%;
+}
+
+.td1
+{
+	border-bottom: #7F87BB 1px solid;
+	background-color: #E5E7F3;
+}
+.td2
+{
+	border-bottom: #7F87BB 1px solid;
+}
+.td3
+{
+	background-color: #F2F2F2;
+	border-right: #C5C5C5 1px solid;
+}
+.td4
+{
+	background-color: #F2F2F2;
+	border-bottom: #7F87BB 1px solid;
+}
+.td5
+{
+	border-bottom: #7F87BB 1px solid;
+	background-color: #E5E7F3;
+	text-indent: 0.5em;
+	color: #4453B0;
+	font-weight: bold;
+}
+.td6
+{
+	border-bottom: #7F87BB 1px solid;
+	text-indent: 0.5em;
+	height: 30px;
+}
+.td7
+{
+	border-bottom: #C5C5C5 1px solid;
+	padding-left: 0.5em;
+}
+.td8
+{
+	background-color: #FFBD00;
+	border-bottom: #A51B1B 1px solid;
+	color: #000000;
+	font-weight: bold;
+	text-indent: 0.5em;
+}
+.td9
+{
+	background-color: #F3F3F3;
+	border-bottom: #A51B1B 1px solid;
+}
+.td10
+{
+	border-bottom: #C5C5C5 1px solid;
+	padding-left: 1.5em;
+}
+.td11
+{
+	border-bottom: #7F87BB 1px solid;
+	background-color: #99CCCC;
+	text-align: center;
+	color: #000000;
+	font-weight: bold;
+}
+.td12
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #EDEDED;
+	text-align: center;
+}
+.td13
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #F6F6F6;
+	text-align: center;
+}
+.td14
+{
+	background-color: #E4E7FC;
+	border-bottom: #C5C5C5 1px solid;
+	text-align: center;
+}
+.td15
+{
+	background-color: #5361C8;
+	border-bottom: #ffffff 1px solid;
+	color: #ffffff;
+	font-weight: bold;
+	text-indent: 0.5em;
+}
+.td16
+{
+	background-color: #5361C8;
+	border-bottom: #000000 1px solid;
+	color: #ffffff;
+	font-weight: bold;
+	text-indent: 0.5em;
+}
+.td17
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #BFBFBF;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+}
+.td18
+{
+	background-color: #5361C8;
+	border-bottom: #000000 1px solid;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+.td19
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #EDEDED;
+}
+.td20
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #F6F6F6;
+}
+.td12b
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #EDEDED;
+}
+.td13b
+{
+	border-bottom: #BCBCBC 1px solid;
+	background-color: #F6F6F6;
+}
+.td121
+{
+	border-bottom: #DADADA 1px solid;
+	height: 21px;
+}
+
+.td12a
+{
+	border-bottom: #BCBCBC 1px solid;
+	border-right: #BCBCBC 1px solid;
+	background-color: #EDEDED;
+	text-align: center;
+}
+.td13a
+{
+	border-bottom: #BCBCBC 1px solid;
+	border-right: #BCBCBC 1px solid;
+	background-color: #F6F6F6;
+	text-align: center;
+}
+
+.sfctd
+{
+	background-color: #FFE9DB;
+	border-bottom: #BCBCBC 1px solid;
+	text-align: center;
+}
+.sfctd1
+{
+	border-bottom: #000000 1px solid;
+	background-color: #FFCD7F;
+	text-align: center;
+}
+.jqctd
+{
+	background-color: #FFF7D6;
+	border-bottom: #BCBCBC 1px solid;
+	text-align: center;
+}
+.jqctd1
+{
+	border-bottom: #000000 1px solid;
+	background-color: #FEEA98;
+	text-align: center;
+}
+.ssqtd
+{
+	background-color: #E4E4FF;
+	border-bottom: #BCBCBC 1px solid;
+	text-align: center;
+}
+.ssqtd1
+{
+	border-bottom: #000000 1px solid;
+	background-color: #CECEFF;
+	text-align: center;
+}
+.qxctd
+{
+	background-color: #EDDCFF;
+	border-bottom: #BCBCBC 1px solid;
+	text-align: center;
+}
+.qxctd1
+{
+	border-bottom: #000000 1px solid;
+	background-color: #DBC0F5;
+	text-align: center;
+}
+
+.wzgreen
+{
+	color: #20782F;
+	font-weight: bold;
+}
+.wzred
+{
+	color: red;
+	font-weight: bold;
+	text-indent: 0.5em;
+}
+.wzred1
+{
+	color: red;
+}
+.wzred2
+{
+	color: #BB3C1A;
+	font-size: 12pt;
+}
+.dotLineStyle
+{
+	border-bottom: 1px dotted Silver;
+}
+#tv_p2_tbLotteryExemple
+{
+	height: 370px;
+	width: 1000px;
+}
+
+#tv_p3_tbAgreement
+{
+	height: 370px;
+	width: 1000px;
+}
+#tv_p1_tbExplain
+{
+	height: 370px;
+	width: 1000px;
+}
+#tv_p4_tbOpenAfficheTemplate
+{
+	height: 370px;
+	width: 1000px;
+}
+#tv_tp0
+{text-decoration:none;}
+#tv_tp1
+{text-decoration:none;}
+#tv_tp2
+{text-decoration:none;}
+#tv_tp3
+{text-decoration:none;}
+

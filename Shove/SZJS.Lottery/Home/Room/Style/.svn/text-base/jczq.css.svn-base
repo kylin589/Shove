@@ -1,0 +1,19 @@
+﻿body { margin:0px; padding:0px; border:0px;  font-size:12px;
+       
+}
+.mina{ width:964px; overflow:hidden; background-image: url('../Images/tab_input_bg.gif'); background-repeat: repeat-x; height:30px; display:block; margin-top:10px; padding-left:20px; }
+.mina span{ margin-right:5px; line-height:21px; display:inline-block; float:left;  height:21px;}
+.mina .btn
+{
+	background-image: url('../Images/jc_btn.jpg');
+	background-repeat: no-repeat;
+	background-position: center center; width:71px; height:21px; display:inline-block; margin-right:20px;
+}
+.mina span label{ float:left;}
+.mina span input{ float:left;}
+.mina .right{ margin-right:20px; float:right;}
+.mina .right select{ float:left; margin-left:10px;} 
+.p{ height:30px; line-height:30px; margin-left:50px;}
+.p span{ color:Red;}
+div table{ width:100%;}
+div table tr td{ border:1px; border-color:#ccccccc;}

@@ -1,0 +1,165 @@
+#gc_bg,.nav_button,.choice,.gg_form_tr_01,.gg_form_tr_02,.form_tr,.listh1 {background:url(../Images/linebg2.png) repeat-x;}
+.butt1 a,.butt2 a,.listh1 span {background:url(../Images/trade.png) no-repeat;}
+#gc_bg {width:986px; background-position:0 -220px; background-color:#FAFAFA; margin-right: auto;margin-left: auto;}
+
+/* LOGO */
+.logo_zuqiu {margin-top:5px; height:44px; background:url(http://jccp.chnlott.com/images/trade/logo.png) no-repeat 0 5px; text-indent:-9999px;}
+
+/* 导航按钮 */
+.nav_button {height:30px; background-position:0 27px;}
+.nav_button li {float:left; width:96px; margin-right:4px; line-height:29px; height:29px; text-align:center;}
+.nav_button .butt1 a:link, .nav_button .butt1 a:visited {display:block; line-height:29px; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none;}
+.nav_button .butt2 a:link,.nav_button .butt2 a:visited {display:block; width:97px; height:29px; line-height:29px; display:block; text-decoration:none; background-position:0 -27px;}
+.nav_button .butt2 a:hover {background-position:0 -54px;}
+.nav_button .time {float:right; width:auto; padding-right:10px; padding-left:18px; }
+
+/* 滚动时间 */
+.reply_type_01 .time_scroll {position:absolute; width:940px;}
+.reply_type_01 .time_scroll2 {position:relative; right:12px; top:3px; float:right; width:102px; padding:0 5px; display:block; text-align:center; height:18px; line-height:18px; background:#000; color:#0f0;}
+
+/* 选择玩法 */
+.touzhu {border:solid #CCCCCC 1px;}
+.choice {height:28px; padding-top:6px; border:solid #DADADA; border-width:0 1px; padding-left:10px; background-position:0 -6px;}
+.reply_type_01 {height:28px; padding-top:5px; padding-left:10px;}
+.reply_type_01 .time {float:right; width:auto; padding-right:10px; padding-left:18px; }
+.ss_slect {position:absolute; left:139px; top:250px;}
+
+.showodds {border-top:solid #E6E6E6 1px; text-align:center;}
+.showodds .gg_form_tr_01 {background-position:0 -48px; font-size:12px; color:#FFFFFF; font-weight:bold;}
+.showodds .gg_form_tr_02 {background-position:0 -68px; font-size:12px; color:#FFFFFF; font-weight:bold;}
+.showodds .form_tr4 {height:30px; background:#F7F7F7;}
+.showodds .form_tr4_2 {height:30px; background:#F2F2F2;}
+.showodds .hoverbg {height:30px; line-height:25px;background:#FFFBDF;}
+.showodds .form_tr4 td,.showodds .form_tr4_2 td,.showodds .hoverbg td {border-bottom:solid #DBDBDB 1px;}
+.showodds .form_tr5 {height:30px; background:#EFEFEF;}
+.showodds .form_tr5 td {border-bottom:solid #DBDBDB 1px;}
+.showodds .form_tr4 .td_click {background:#FCC169;font-weight:bold;}
+.showodds .form_tr4_2 .td_click {background:#FCC169;font-weight:bold;}
+.showrate {border-top:solid #E6E6E6 1px; text-align:center;}
+.showrate .gg_form_tr_01 {height:30px; background-position:0 -48px;}
+.showrate .gg_form_tr_02 {height:30px; background-position:0 -68px;}
+.showrate .form_tr4 {background:#F7F7F7;}
+.showrate .form_tr4_2 {background:#F2F2F2;}
+.showrate .hoverbg {height:30px; line-height:25px;background:#FFFBDF;}
+.showrate .form_tr4 td,.showrate .form_tr4_2 td,.showrate .hoverbg td {border-bottom:solid #DBDBDB 1px;}
+.showrate .form_tr5 {height:30px; background:#EFEFEF;}
+.showrate .form_tr5 td {border-bottom:solid #DBDBDB 1px;}
+.showrate .form_tr4 .td_click {background:#FCC169;font-weight:bold;}
+.showrate .form_tr4_2 .td_click {background:#FCC168;font-weight:bold;}
+
+.bd_touzhu {margin:10px auto;}
+.gg_form_tr_02 .s{width:75px;}
+
+.team1 a:link,.team1 a:visited {color:#fff;}
+.table_jczqtz_gg {border:solid #ff857f 1px;}
+.table_jczqtz_gg .jczqtouzu_title_gg {height:23px; color:#2d2d2d; font-weight:bold; background:#fff5f4; text-indent:13px;}
+.table_bdtz_gg {margin-bottom:5px;}
+.table_bdtz_gg .t02 td {height:26px; background:#E9F3FF; border-bottom:solid #D3E8FD 1px;}
+.table_bdtz_gg .t03 td {height:30px; text-align:center; border:solid #D3E8FD; border-width:0 1px 1px 0;}
+.table_bdtz_gg .t03 .bnone {border-right:none;}
+.table_bdtz_gg .t04 td {padding-left:13px; height:27px; background:#E9F3FF; border-bottom:solid #D3E8FD 1px;}
+.table_bdtz_gg .t05 td {padding-left:13px; height:30px; border-bottom:solid #D3E8FD 1px;}
+.table_bdtz_gg .td_pad {padding:8px 0 0 13px; line-height:25px;}
+.touz_btn {width:139px; margin:15px auto;}
+.sg_text01 {padding:15px 0 15px 15px; background:#F8F8F8; line-height:22px;}
+.sp img { cursor:pointer;}
+.sp_box { border:#B5A58D solid 2px; padding:2px;}
+.sp_table { background:#ccc; line-height:16px;}
+.ttd .sp_table td { border:0;}
+.sp_3 { background:#fff0ea;}
+.sp_1 { background:#fffeed;}
+.sp_0 { background:#f1f8ff;}
+.sp_n { text-align:left; width:70px; margin:auto;}
+.sp_bg { font-weight:bold;}
+.ttd td.sp_sbg { bord er:#f39700 solid 1px; background:#ffdaa4}
+.s_add {padding:0 15px 0 10px; color:#f00; background:url(../Images/dot2.gif) no-repeat 62px 0;}
+.s_hidden {padding:0 15px 0 10px; color:#f00; background:url(../Images/dot1.gif) no-repeat 62px 0;}
+
+/* 确认代购 */
+.listh1 {height:33px; background-position:0 -183px;}
+.listh1 span {width:94px; margin-left:20px; height:33px; display:block; background-position:0 -375px; text-indent:-9999px;}
+.listtable_t { height:35px; background:#F3F3F3; border-bottom:#E4E4E4 solid 1px; border-top:#fff solid 1px; text-align:center; padding:5px 10px; width:130px;}
+.listtable_c { height:35px; background:#fff; border-bottom:#E4E4E4 solid 1px; border-top:#fff solid 1px; padding:5px 10px;}
+.none_line {border-bottom:none;}
+.dg_trbg1 {line-height:30px; text-align:center; background:#F8F7F1;}
+.dg_trbg2 {line-height:30px; text-align:center; background:#fff;}
+.gg_form_trt_01 td {height:24px; color:#4E672D; text-align:center;}
+.gg_form_trt_02 td {height:24px; background:#C1E591; color:#4E672D; text-align:center}
+
+/* 复式代购 */
+.infoqihao { height:33px; line-height:33px; background:url(http://jccp.chnlott.com/images/trade/bg_infoqihao.gif); border-bottom:#E1E1E1 solid 1px; text-align:center; font-size:16px; color:#5b595a; font-weight:bold; font-family:Arial;}
+.infoqihao .l { font-size:16px;}
+.infoqihao .r { text-align:right; font-weight:normal; padding-right:10px; width:100px;}
+.infojiezhi { height:27px; line-height:27px; background:#f3e8db; text-align:center; color:#000;}
+.infotable { border:#E1E1E1 solid; border-width:1px 0; background:#fff; margin-bottom:10px;}
+.infotable .tdl {background:#f5f5f5; width:165px; color:#9a9a9a; text-align:center; height:30px; border-bottom:#e1e1e1 solid 1px;}
+.infotable .tdr { padding:8px 0; padding-left:15px; line-height:20px; border-bottom:#e1e1e1 solid 1px;} 
+.infotable .trl { background:#fffddc; width:140px; color:#9a9a9a; text-align:center; height:30px;}
+.infotable .trr { background:#fffdec; padding:8px 0; padding-left:15px; line-height:20px;}
+
+.td_fangan {border-bottom:#e1e1e1 solid 1px;}
+.fangan_table {width:754px; margin:10px 0 5px 15px; border:#F2A796 solid; border-width:1px 0 0 1px; background:#fff}
+
+.fangan_table th { background:#f3e8db; padding:5px; border:#f6bcaf solid; border-width:0 1px 1px 0; color:#822510;}
+.fangan_table td { padding:7px; border:#f6bcaf solid; border-width:0 1px 1px 0; text-align:center;}
+.sfc_fa{margin:8px 0px; overflow:auto; zoom:1; line-height:20px;}
+.gz_detail {padding-left:25px;}
+.sfc_fangan {margin:12px 0 7px 14px; overflow:auto; zoom:1; line-height:20px;}
+.getmoney {display:block; padding-top:5px;}
+.sfc_fangan .fl {float:left;}
+.sfc_fangan .fr {float:right; margin:0 20px 0 35px;}
+.fr .downlook { background:url(http://jccp.chnlott.com/images/trade/dowmore.gif) no-repeat 0 2px; padding-left:14px;}
+.fr .downlook2 { background:url(http://jccp.chnlott.com/images/trade/dowmore2.gif) no-repeat 0 2px; padding-left:14px;}
+.getmoney {display:block; padding-top:5px;}
+.sfc_fa .fr {float:left; margin-left:35px; display:block;}
+.downlook { background:url(http://jccp.chnlott.com/images/static/public/dowmore.gif) no-repeat 0 2px; padding-left:14px;}
+.downlook2 { background:url(http://jccp.chnlott.com/images/static/public/dowmore2.gif) no-repeat 0 2px; padding-left:14px;}
+
+
+.tdbback {width:749px; background:#f6bcaf; padding:3px; margin:0 0 10px 15px;}
+.tdbback .tablelay {background;#fff; text-align:center;}
+.tablelay .trbg {background:#f3e8db; height:23px; line-height:23px; font-weight:normal;}
+.tablelay .trline {border-top:solid #f6bcaf 1px;} 
+.tablelay .trline2 {border-top:solid #f6bcaf 1px; border-bottom:solid #f6bcaf 1px;}
+.tablelay .trline3 {border-left:solid #f6bcaf 1px;}
+.tablelay .trline4 {border-right:solid #f6bcaf 1px;}
+.tablelay .trline5 {border-left:solid #f6bcaf 1px;}
+.tablelay .trline6 {border-left:solid #f6bcaf 1px;text-align:left;padding-left:6px;}
+.tablelay .tr1 {background:#F9F9F9; height:23px; line-height:23px; text-align:center;}
+.tablelay .tr2 {background:#fff; height:23px; line-height:23px; text-align:center;}
+.tablelay .texts {width:20px; margin:5px auto; line-height:16px; text-align:center;}
+.tablelay .texts span {display:block; margin:3px auto;}
+.pagefy {margin:12px auto; text-align:center;}
+.tdbback .tablelay1 {background:#fff; text-align:center;}
+.tablelay1 .trbg {background:#DFE8F6; height:26px; line-height:26px; border-top:solid #F2A796 1px;}
+.tablelay1 .trline {border-top:solid #C9DAEC 1px;} 
+.tablelay1 .trline2 {border-top:solid #C9DAEC 1px; border-bottom:solid #F2A796 1px;}
+.tablelay1 .trline3 {border-left:solid #F2A796 1px;}
+.tablelay1 .trline4 {border-right:solid #F2A796 1px;}
+.tablelay1 .trline5 {border-left:solid #C9DAEC 1px;}
+.tablelay1 tr{height:25px; line-height:25px; text-align:center;}
+.tablelay1 .tr1 {background:#F9F9F9;}
+.tablelay1 .tr2 {background:#fff;}
+.tablelay1 .tr3 {background:#FFFACC; cursor:pointer}
+.tablelay1 .texts {width:20px; margin:5px auto; line-height:16px; text-align:center;}
+.tablelay1 .texts span {display:block; margin:3px auto;}
+.red_b16 { color:#FF0000; font-weight:bold; font-size:18px}
+
+.hmtab {padding-left:10px; height:27px; background:url(http://jccp.chnlott.com/images/trade/tabbg.gif) repeat-x 0 1px; margin-top:5px;}
+.hmtab li { width:127px; height:27px; line-height:25px; cursor:pointer; margin-right:10px; float:left; text-align:center;}
+.hmtab .tab1 { background:url(http://jccp.chnlott.com/images/trade/tab_hm1.gif); color:#7D0000; font-weight:bold;}
+.hmtab .tab2 {width:105px; background:url(http://jccp.chnlott.com/images/trade/tab_hm2.gif) no-repeat 0 1px; color:#7D0000;}
+.hmtablist {line-height:30px; padding:2px; text-align:center;}
+.hmtablist th {font-weight:normal; background:#f5f5f5; border-bottom:#ccc solid 1px;}
+.hmtablist .tr2 {line-height:50px; background:#f5f5f5;}
+.hmtabpage { text-align:right; margin-top:10px; margin-right:10px;}
+
+/* 复式代购 */
+.page { height:50px; margin:0px auto; }
+.page table{height: 50px;}
+.page li { font-family: tahoma, Arial, 宋体; padding:0px 7px; height:19px; line-height:19px; float:left; border: 1px solid #B5C5DC; margin-right:4px; text-align:center; text-decoration:none; cursor:pointer; display: block; vertical-align:middle}
+.page li a, .page li a:link, .page li a:visited { text-decoration: none; }
+.page li img { border: 0px; }
+.page li img { _margin-top:5px; }/*为IE6定义的属性 */
+.page .pa_aq, .page .pa_aq a { background-color: #48AEDF; color:#FFF; }
+

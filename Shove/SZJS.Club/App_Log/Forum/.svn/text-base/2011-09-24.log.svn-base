@@ -1,0 +1,7 @@
+2011-09-24 16:42:33:281		Failed ScheduledEventCallBack:在向服务器发送请求时发生传输级错误。 (provider: TCP 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+
+2011-09-24 16:51:22:875		Failed ScheduledEventCallBack:在向服务器发送请求时发生传输级错误。 (provider: TCP 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+
+2011-09-24 16:51:33:187		Failed ScheduledEventCallBack:无法打开登录所请求的数据库 "SZJS_Lottery_bbs"。登录失败。
+用户 'sa' 登录失败。
+
